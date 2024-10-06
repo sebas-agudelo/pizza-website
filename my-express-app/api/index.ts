@@ -6,7 +6,11 @@ import { createClient } from '@supabase/supabase-js'
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: "https://pizza-website-gold.vercel.app/",
+    credentials: true, 
+}));
+
 
 dotenv.config();
 
