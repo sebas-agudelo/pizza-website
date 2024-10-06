@@ -2,9 +2,9 @@
   "name": "my-express-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "api/index.ts",
   "scripts": {
-     "start": "ts-node src/index.ts",
+     "start": "ts-node api/index.ts",
   "dev": "nodemon"
   },
   "keywords": [],
