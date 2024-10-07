@@ -7,10 +7,11 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: ["https://pizza-website-gold.vercel.app/"],
-    methods: ["POST", "GET"],
+    origin: 'https://pizza-website-gold.vercel.app/',
     credentials: true, 
 }));
+
+
 
 
 dotenv.config();
