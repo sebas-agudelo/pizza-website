@@ -10,26 +10,30 @@ function App() {
     }, []);
 
     const fetProducts = async () => {
-      try {
-          const res = await fetch('https://pizza-website-wona.vercel.app/', {
-              method: "GET"
-          });
-          if (!res.ok) throw new Error('Network response was not okooooo');
-  
-          const data = await res.json();
-          if (!data || data.length === 0) {
-              console.log('No products returned from the API');
-              setProduct([]); // Set empty array if no products
-              return;
-          }
-  
-          setProduct(data);
-          console.log(data);
-      } catch (error) {
-          console.error('Error fetching products:', error);
-      }
-  };
-  
+        try {
+            // Use the appropriate API URL based on the environment
+            const apiUrl = process.env.NODE_ENV === 'production'
+                ? process.env.REACT_APP_API_URL_PRODUCTION || 'https://pizza-website-wona.vercel.app/'
+                : process.env.REACT_APP_API_URL || 'http://localhost:3001'
+
+            const res = await fetch(apiUrl, {
+                method: "GET"
+            });
+            if (!res.ok) throw new Error('Network response was not ok');
+
+            const data = await res.json();
+            if (!data || data.length === 0) {
+                console.log('No products returned from the API');
+                setProduct([]); // Set empty array if no products
+                return;
+            }
+
+            setProduct(data);
+            console.log(data);
+        } catch (error) {
+            console.error('Error fetching products:', error);
+        }
+    };
 
     return (
         <div className="App">
