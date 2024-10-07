@@ -33,7 +33,7 @@ app.get("/", async (req: Request, res: Response) => {
 
         if (error) {
             console.error("Error fetching products:", error);
-            return res.status(500).send("Error fetching products");
+            return res.status(500).send("Error fetching productsssssss");
         }
 
         console.log("Fetched Products:", Products); // Log the fetched products
