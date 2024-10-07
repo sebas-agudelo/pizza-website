@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+.App h3{
+  color: red;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
