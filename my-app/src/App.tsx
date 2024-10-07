@@ -23,7 +23,7 @@ function App() {
 
             const data = await res.json();
             if (!data || data.length === 0) {
-                console.log('No products returned from the API');
+                console.log('No products returned from the APII');
                 setProduct([]); // Set empty array if no products
                 return;
             }
