@@ -3,10 +3,9 @@ import './App.css';
 import { IProducts } from './module/products';
 
 function App() {
-    const [products, setProduct] = useState<IProducts[]>([]); // Initialize as an empty array
+    const [products, setProduct] = useState<IProducts[]>([]); 
 
-    // Set this flag to switch between local and production URLs
-    const useLocalApi = true; // Change this to false to use the production URL
+    const useLocalApi = true;
 
     useEffect(() => {
         fetProducts();
@@ -14,10 +13,9 @@ function App() {
 
     const fetProducts = async () => {
         try {
-            // Choose the API URL based on the useLocalApi flag
             const apiUrl = useLocalApi
-                ? 'http://localhost:3001' // Local development URL
-                : 'https://pizza-website-wona.vercel.app/'; // Production URL
+                ? 'http://localhost:3001' 
+                : 'https://pizza-website-wona.vercel.app/'; 
 
             const res = await fetch(apiUrl, {
                 method: "GET"
@@ -28,7 +26,7 @@ function App() {
             const data = await res.json();
             if (!data || data.length === 0) {
                 console.log('No products returned from the API');
-                setProduct([]); // Set empty array if no products
+                setProduct([]);
                 return;
             }
 
