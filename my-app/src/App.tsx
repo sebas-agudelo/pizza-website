@@ -14,7 +14,7 @@ function App() {
           const res = await fetch('https://pizza-website-wona.vercel.app/', {
               method: "GET"
           });
-          if (!res.ok) throw new Error('Network response was not ok');
+          if (!res.ok) throw new Error('Network response was not okooooo');
   
           const data = await res.json();
           if (!data || data.length === 0) {
