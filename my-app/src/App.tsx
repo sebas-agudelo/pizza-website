@@ -10,7 +10,7 @@ function App() {
   }, [])
 
  const fetProducts = async () => {
-    const res = await fetch('http://localhost:3001');
+    const res = await fetch('https://vercel.com/sebastians-projects-a75de01e/pizza-website-wona');
     const data = await res.json();
 
     setProduct(data);
