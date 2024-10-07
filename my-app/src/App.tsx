@@ -13,8 +13,8 @@ function App() {
         try {
             // Use the appropriate API URL based on the environment
             const apiUrl = process.env.NODE_ENV === 'production'
-                ? process.env.REACT_APP_API_URL_PRODUCTION || 'https://pizza-website-wona.vercel.app/'
-                : process.env.REACT_APP_API_URL || 'http://localhost:3001'
+                ? 'https://pizza-website-wona.vercel.app/'
+                : 'http://localhost:3001'
 
             const res = await fetch(apiUrl, {
                 method: "GET"
