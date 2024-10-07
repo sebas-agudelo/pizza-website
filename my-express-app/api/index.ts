@@ -11,7 +11,8 @@ app.use(express.json());
 // CORS setup
 app.use(cors({
     origin: [
-        'https://pizza-website-gold.vercel.app'
+        'https://pizza-website-gold.vercel.app',
+        'http://localhost:3000'
     ],
     credentials: true, // Allow cookies to be sent
 }));
