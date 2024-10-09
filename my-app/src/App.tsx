@@ -55,8 +55,8 @@ function App() {
             ) : (
                 products.map((product) => (
                     <div key={product.product_name}>
-                        <h3>{product.product_name}</h3>
-                        <h3>{product.product_price}kr</h3>
+                        <h3>Produktensnamn: {product.product_name}</h3>
+                        <h3>ProduktensPris: {product.product_price}kr</h3>
                     </div>
                 ))
             )}
