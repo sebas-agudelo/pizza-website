@@ -24,7 +24,7 @@ function App() {
         <div className="App">
             <h1>Hello World</h1>
             {products.length === 0 ? (
-                <div>Inga produkter hittades</div>
+                <div>Inga produkter hittadessss</div>
             ) : (
                 products.map((product) => (
                     <div key={product.product_name}>
