@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { IProducts } from './module/products';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
+import Products from './pages/Products';
 
 function App() {
     const [products, setProduct] = useState<IProducts[]>([]); 
@@ -24,7 +29,7 @@ function App() {
         <div className="App">
             <h1>Hello World</h1>
             {products.length === 0 ? (
-                <div>Inga produkter hittadessss</div>
+                <div>Laddar.......</div>
             ) : (
                 products.map((product) => (
                     <div key={product.product_name}>
@@ -33,6 +38,16 @@ function App() {
                     </div>
                 ))
             )}
+
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Home />}/>
+                    <Route path='pizzor' element={<Products />}/>
+                    <Route path='/loggain' element={<Signin />}/>
+                    <Route path='/registrera' element={<Signup />}/>
+                    <Route />
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }
