@@ -4,13 +4,12 @@ import { IProducts } from './module/products';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Signin from './pages/Signin';
-import Signup from './pages/Signup';
 import Products from './pages/Products';
 import Nav from './components/Nav';
 import Contact from './pages/Contact';
+import './sass/style.scss'
 
 function App() {
-
     return (
         <div className="App">
             <BrowserRouter>
@@ -18,8 +17,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home />}/>
                     <Route path='pizzor' element={<Products />}/>
-                    <Route path='/loggain' element={<Signin />}/>
-                    <Route path='/registrera' element={<Signup />}/>
+                    <Route path='/adminpanel' element={<Signin />}/>
                     <Route path='/kontakt' element={<Contact />}/>
                     <Route />
                 </Routes>
