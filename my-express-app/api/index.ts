@@ -11,7 +11,8 @@ app.use(express.json());
 // CORS setup
 app.use(cors({
     origin: [
-        'https://pizza-website-gold.vercel.app'
+        'https://pizza-website-gold.vercel.app',
+        'http://localhost:3000'
     ],
     credentials: true,
 }));
@@ -34,5 +35,25 @@ app.get("/", async (req: Request, res: Response) => {
         return res.status(500).send("Unexpected error occurred");
     }
 });
+
+app.post('/adminlogin', async (req: Request, res: Response) => {
+    const {email, password} = req.body;
+    try {
+        let { data, error } = await supabase.auth.signInWithPassword({
+            email,
+            password
+        })
+
+        if(!error){
+            res.status(200).json(data);
+            
+        } else{
+            res.status(404).json({error404: 'Något gick fel. Skriv in rätt e-post och lösenord'})
+        }
+
+    } catch (error) {
+        return res.status(500).json({ errMessage: 'Något har något fel' });
+    }
+})
 
 app.listen(3001, () => console.log("Server ready on port 3001."));
