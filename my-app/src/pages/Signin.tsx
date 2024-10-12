@@ -30,7 +30,7 @@ export default function Signin() {
           setError404(userData.error404);
           
         } else{
-          nav('/');
+          nav('/adminpanel');
 
         }
         
@@ -50,7 +50,6 @@ export default function Signin() {
 
   return (
     <div>
-      Sign in
     <h3 style={{color: "red"}}>{error404}</h3>
 
       <div>

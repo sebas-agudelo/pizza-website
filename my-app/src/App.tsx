@@ -8,6 +8,8 @@ import Products from './pages/Products';
 import Nav from './components/Nav';
 import Contact from './pages/Contact';
 import './sass/style.scss'
+import AdminPanel from './pages/AdminPanel';
+import AddProduct from './pages/AddProduct';
 
 function App() {
     return (
@@ -17,8 +19,10 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home />}/>
                     <Route path='pizzor' element={<Products />}/>
-                    <Route path='/adminpanel' element={<Signin />}/>
+                    <Route path='/adminlogin' element={<Signin />}/>
                     <Route path='/kontakt' element={<Contact />}/>
+                    <Route path='/adminpanel' element={<AdminPanel />}/>
+                    <Route path='/nyprodukt' element={<AddProduct />}/>
                     <Route />
                 </Routes>
             </BrowserRouter>
