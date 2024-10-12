@@ -36,24 +36,48 @@ app.get("/", async (req: Request, res: Response) => {
     }
 });
 
+app.post('/addProduct', async (req: Request, res: Response) => {
+    try {
+        const { category_id, product_name, product_price, product_desc } = req.body;
+
+        const { data, error } = await supabase
+            .from('Products')
+            .insert([
+                { 
+                    category_id,
+                    product_name,
+                    product_price,
+                    product_desc
+                },
+            ])
+            .select()
+
+            res.status(200).json(data)
+    } catch (error) {
+        return res.status(500).send("Unexpected error occurred");
+    }
+});
+
 app.post('/adminlogin', async (req: Request, res: Response) => {
-    const {email, password} = req.body;
+    const { email, password } = req.body;
     try {
         let { data, error } = await supabase.auth.signInWithPassword({
             email,
             password
         })
 
-        if(!error){
+        if (!error) {
             res.status(200).json(data);
-            
-        } else{
-            res.status(404).json({error404: 'Något gick fel. Skriv in rätt e-post och lösenord'})
+
+        } else {
+            res.status(404).json({ error404: 'Något gick fel. Skriv in rätt e-post och lösenord' })
         }
 
     } catch (error) {
         return res.status(500).json({ errMessage: 'Något har något fel' });
     }
-})
+});
+
+
 
 app.listen(3001, () => console.log("Server ready on port 3001."));
