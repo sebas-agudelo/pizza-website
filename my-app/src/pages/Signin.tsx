@@ -10,7 +10,7 @@ export default function Signin() {
   const nav = useNavigate();
 
   const SignInForm = async () => {
-    try{
+    try {
       const res = await fetch('https://pizza-website-wona.vercel.app/adminlogin', {
         method: "POST",
         headers: {
@@ -19,27 +19,27 @@ export default function Signin() {
         body: JSON.stringify({ email, password }),
         credentials: 'include'
       });
-  
+
       const userData = await res.json();
 
-      if(email === '' || 
-        password === ''){
-          alert('Fälten är obligatoriska')
-          
-        } else if(!res.ok){
-          setError404(userData.error404);
-          
-        } else{
-          nav('/adminpanel');
+      if (email === '' ||
+        password === '') {
+        alert('Fälten är obligatoriska')
 
-        }
-        
-        console.log(userData);
+      } else if (!res.ok) {
+        setError404(userData.error404);
 
-    } catch (error){
+      } else {
+        nav('/adminpanel');
+
+      }
+
+      console.log(userData);
+
+    } catch (error) {
       console.log(error);
-      
-    }  
+
+    }
   }
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
@@ -49,13 +49,21 @@ export default function Signin() {
 
 
   return (
-    <div>
-    <h3 style={{color: "red"}}>{error404}</h3>
+    <div className='login-container'>
+      <h3 style={{ color: "red" }}>{error404}</h3>
 
-      <div>
+      <div className='login-content'>
+        <h3>Välkommen tillbaka</h3>
+
         <form onSubmit={handleLogin}>
-          <input type="email" onChange={(e) => SetEmail(e.target.value)}/>
-          <input type="password" onChange={(e) => setPassword(e.target.value)}/>
+          <input type="email"
+            onChange={(e) => SetEmail(e.target.value)}
+            placeholder='E-post'
+          />
+          <input type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder='Lösenord'
+          />
           <input type="submit" value='Logga in' />
         </form>
       </div>
