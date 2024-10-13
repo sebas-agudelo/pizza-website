@@ -14,14 +14,14 @@
         margin: 0 auto;
         
         h3{
-            color: black;
+            color: rgba(0, 0, 0, 0.61);
             background-color: rgb(255, 183, 0); 
             height: 100px;
             margin-bottom: 40px;
-            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 1.6em;
         }
         form {
             display: flex;
