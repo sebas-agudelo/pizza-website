@@ -14,6 +14,9 @@ export default function Nav() {
                 <li>
                     <Link to={`/kontakt`}>Kontakt</Link>
                 </li>
+                <li>
+                    <Link to={`/login`}>Logga in</Link>
+                </li>
             </ul>
         </nav>
     )

@@ -34,7 +34,7 @@ export default function AddProduct() {
       productInfo.product_desc === '' ||
       isNaN(productInfo.category_id)) {
 
-      setEmptyErr('Det går inte att lära till category id')
+      setEmptyErr('Det går inte att lära till category idd')
       return;
 
     };
