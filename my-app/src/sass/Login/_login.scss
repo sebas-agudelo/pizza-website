@@ -12,10 +12,11 @@
         height: 380px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         margin: 0 auto;
+
         
         h3{
             color: rgba(0, 0, 0, 0.61);
-            background-color: rgb(255, 183, 0); 
+            background-color: #ffb700; 
             height: 100px;
             margin-bottom: 40px;
             display: flex;
@@ -23,6 +24,17 @@
             align-items: center;
             font-size: 1.6em;
         }
+
+        .admin-login{
+            background-color: #00306b; 
+            color: #ffffff;
+        }
+
+        .user-login{
+            background-color: #ffb700; 
+        }
+
+
         form {
             display: flex;
             flex-direction: column;
@@ -33,7 +45,7 @@
             input[type="password"] {
                 padding: 10px 0;
                 border: none;
-                border-bottom: 1px solid rgb(255, 183, 0);
+                border-bottom: 1px solid #ffb700;
                 &:focus {
                     outline: none;
                 }

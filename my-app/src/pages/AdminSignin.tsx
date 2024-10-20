@@ -53,7 +53,7 @@ export default function AdminSignin() {
       <h3 style={{ color: "red" }}>{error404}</h3>
 
       <div className='login-content'>
-        <h3>Välkommen tillbaka</h3>
+        <h3 className='admin-login'>Välkommen tillbaka</h3>
 
         <form onSubmit={handleLogin}>
           <input type="email"
