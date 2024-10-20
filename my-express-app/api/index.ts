@@ -64,19 +64,62 @@ app.post('/adminlogin', async (req: Request, res: Response) => {
         let { data, error } = await supabase.auth.signInWithPassword({
             email,
             password
-        })
+        });
 
-        if (!error) {
-            res.status(200).json(data);
-
-        } else {
-            res.status(404).json({ error404: 'Något gick fel. Skriv in rätt e-post och lösenord' })
+        if (error || !data.user) {
+            return res.status(404).json({ error404: 'Något gick fel. Skriv in rätt e-post och lösenord' });
         }
 
+        const { data: isAdmin, error: roleError } = await supabase
+            .from('user_roles')
+            .select('role')
+            .eq('user_id', data.user.id) 
+            .eq('role', 'admin') 
+            .single(); 
+
+        if (roleError || !isAdmin) {
+            return res.status(403).json({ error: 'Åtkomst nekad. Endast admin kan logga in.' });
+        }
+
+        res.status(200).json({ message: 'Admin inloggad', user: data.user });
+
     } catch (error) {
-        return res.status(500).json({ errMessage: 'Något har något fel' });
+        return res.status(500).json({ errMessage: 'Något har gått fel' });
     }
 });
+
+app.post('/userlogin', async(req: Request, res: Response) => {
+    const { email, password } = req.body;
+    try {
+        let { data, error } = await supabase.auth.signInWithPassword({
+            email,
+            password
+        });
+
+        if (error || !data.user) {
+            return res.status(404).json({ error404: 'Något gick fel. Skriv in rätt e-post och lösenord' });
+        }
+
+        const { data: isAdmin, error: roleError } = await supabase
+            .from('user_roles')
+            .select('role')
+            .eq('user_id', data.user.id) 
+            .eq('role', 'admin') 
+            .single(); 
+
+        if (isAdmin) {
+            return res.status(403).json({ error: 'Åtkomst nekad. Endast användare kan logga in.' });
+        }
+
+        res.status(200).json({ message: 'Användare inloggad', user: data.user });
+
+    } catch (error) {
+        return res.status(500).json({ errMessage: 'Något har gått fel' });
+    }
+});
+
+
+
 
 
 
