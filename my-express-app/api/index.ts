@@ -28,22 +28,33 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 const upload = multer({storage: multer.memoryStorage()});
 
+
+
 app.get("/", async (req: Request, res: Response) => {
 
     try {
-        const { data: Products, error } = await supabase
-        .from('Products')
+        const { data: products, error } = await supabase
+        .from('products')
         .select('*');
 
-        return res.json(Products);
+        console.log(products);
+        
+        return res.json(products);
     } catch (error) {
         return res.status(500).send("Unexpected error occurred");
     }
 });
 
 app.post('/addProduct', upload.single('file'), async (req: Request, res: Response) => {
-    console.log(req.file);  // Logga för att se om filen faktiskt mottas
-    console.log(req.body);  // Logga body för att se övriga data
+ const { data: { user }, error: userError } = await supabase.auth.getUser();
+
+    console.log('Current User:', user); // Logga den aktuella användaren
+    console.log('User Error:', userError); // Logga eventuella fel vid hämtning av användare
+
+    if (userError || !user) {
+        return res.status(401).json({ error: "Du måste logga in för att lägga till produkter." });
+    }
+
     const file = req.file;
     if (!file) {
         return res.status(400).json({ errorMess: "ERROR 400...... Ingen fil hittades" });
@@ -75,7 +86,7 @@ app.post('/addProduct', upload.single('file'), async (req: Request, res: Respons
         const { category_id, product_name, product_price, product_desc, product_img } = req.body;
 
         const { data, error } = await supabase
-            .from('Products')
+            .from('products')
             .insert([
                 { 
                     category_id,
@@ -101,24 +112,30 @@ app.post('/adminlogin', async (req: Request, res: Response) => {
             password
         });
 
+        console.log('Login Attempt:', { email, password, data, error }); // Logga inloggningsförsöket
+
         if (error || !data.user) {
             return res.status(404).json({ error404: 'Något gick fel. Skriv in rätt e-post och lösenord' });
         }
 
-        const { data: isAdmin, error: roleError } = await supabase
-            .from('user_roles')
+        const { data: rolesData, error: roleError } = await supabase
+            .from('roles')
             .select('role')
-            .eq('user_id', data.user.id) 
-            .eq('role', 'admin') 
-            .single(); 
+            .eq('user_id', data.user.id);
+
+        console.log('Roles Data:', rolesData); // Logga rollerna som returneras
+        console.log('Role Error:', roleError); // Logga eventuella fel från rolesfrågan
+
+        const isAdmin = rolesData && rolesData.some(role => role.role === 'admin');
 
         if (roleError || !isAdmin) {
             return res.status(403).json({ error: 'Åtkomst nekad. Endast admin kan logga in.' });
         }
 
-        res.status(200).json({ message: 'Admin inloggad', user: data.user });
+        return res.status(200).json({ message: 'Admin inloggad', user: data.user });
 
     } catch (error) {
+        console.error('Catch Error:', error);
         return res.status(500).json({ errMessage: 'Något har gått fel' });
     }
 });
@@ -136,11 +153,10 @@ app.post('/userlogin', async(req: Request, res: Response) => {
         }
 
         const { data: isAdmin, error: roleError } = await supabase
-            .from('user_roles')
+            .from('roles')
             .select('role')
             .eq('user_id', data.user.id) 
             .eq('role', 'admin') 
-            .single(); 
 
         if (isAdmin) {
             return res.status(403).json({ error: 'Åtkomst nekad. Endast användare kan logga in.' });
@@ -153,9 +169,21 @@ app.post('/userlogin', async(req: Request, res: Response) => {
     }
 });
 
+app.post('/logout', async (req: Request, res: Response) => {
+    try {
+        const { error } = await supabase.auth.signOut();
 
-
-
+        if (error) {
+            return res.status(400).json({ error: 'Kunde inte logga ut' });
+        }
+        console.log('Du är utloggad');
+        
+        res.status(200).json({ message: 'Du har loggat ut framgångsrikt' });
+    } catch (error) {
+        console.error('Logout Error:', error);
+        return res.status(500).json({ error: 'Något gick fel vid utloggning' });
+    }
+});
 
 
 app.listen(3001, () => console.log("Server ready on port 3001."));
