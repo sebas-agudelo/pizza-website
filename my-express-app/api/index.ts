@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import cors from 'cors';
 import dotenv from 'dotenv';
+import multer from 'multer';
 import { createClient } from '@supabase/supabase-js';
 
 const app = express();
@@ -25,10 +26,14 @@ const supabaseUrl = process.env.SUPABASE_URL || '';
 const supabaseKey = process.env.SUPABSE_KEY || '';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+const upload = multer({storage: multer.memoryStorage()});
+
 app.get("/", async (req: Request, res: Response) => {
 
     try {
-        const { data: Products, error } = await supabase.from('Products').select('*');
+        const { data: Products, error } = await supabase
+        .from('Products')
+        .select('*');
 
         return res.json(Products);
     } catch (error) {
@@ -36,9 +41,38 @@ app.get("/", async (req: Request, res: Response) => {
     }
 });
 
-app.post('/addProduct', async (req: Request, res: Response) => {
+app.post('/addProduct', upload.single('file'), async (req: Request, res: Response) => {
+    console.log(req.file);  // Logga för att se om filen faktiskt mottas
+    console.log(req.body);  // Logga body för att se övriga data
+    const file = req.file;
+    if (!file) {
+        return res.status(400).json({ errorMess: "ERROR 400...... Ingen fil hittades" });
+    }
+
     try {
-        const { category_id, product_name, product_price, product_desc } = req.body;
+        
+        const {data: uploadData, error: uploadError} = await supabase.storage
+        .from('pizza-webside-files') // Min buckets url
+        .upload(`public/${Date.now()}_${file.originalname}`, file.buffer, {
+            contentType: file.mimetype
+        });
+
+        if (uploadError) {
+            console.log('Upload Error: ', uploadError);  // Loggar eventuella fel
+            return res.status(500).json({errorMess: "EROOR 500...... Något gick fel under filuppladdning"});
+        }
+
+        if(!uploadData){
+            return res.status(500).json({errorMess: "EROOR 500...... Något har gått fel"})
+        };
+
+        const { data: publicUrlData } = supabase.storage
+        .from('pizza-webside-files')
+        .getPublicUrl(uploadData.path);
+
+        const imageUrl = publicUrlData.publicUrl;
+        
+        const { category_id, product_name, product_price, product_desc, product_img } = req.body;
 
         const { data, error } = await supabase
             .from('Products')
@@ -47,7 +81,8 @@ app.post('/addProduct', async (req: Request, res: Response) => {
                     category_id,
                     product_name,
                     product_price,
-                    product_desc
+                    product_desc,
+                    product_img: imageUrl
                 },
             ])
             .select()
