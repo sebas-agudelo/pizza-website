@@ -24,6 +24,7 @@ const fetProducts = async () => {
             ) : (
                 products.map((product) => (
                     <div key={product.product_name}>
+                      <img src={product.product_img} alt={product.product_name} />
                         <h3>Produktensnamn: {product.product_name}</h3>
                         <h3>ProduktensPris: {product.product_price}kr</h3>
                     </div>
