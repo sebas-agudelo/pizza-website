@@ -10,14 +10,9 @@ nav{
     padding: 0 50px; 
     list-style: none;
 
-
-    
     ul{
-       
         display: flex;
- 
-        list-style: none;
-        
+        list-style: none; 
 
         li{
             margin: 0 10px;
@@ -25,8 +20,7 @@ nav{
 
             a{
                 color: #000000;
-                text-decoration: none;
-               
+                text-decoration: none;  
             }
         }
     }

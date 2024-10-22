@@ -3,9 +3,6 @@
     height: 100dvh;
     position: relative;
 
-   
-    
-    
     .hero-img{
         background-image: url("../../../public/hero-img.jpg");
         background-position: center;
@@ -15,12 +12,49 @@
         width: 100%;
     }
 
+    .btn-wrapper{
+    display: none;
+
+    }
+
     .bla{
         height: 500px;
         width: 100%;
     }
+};
 
 
+@media screen and (min-width: 768px) {
+    .home{
+      
+    
+        .btn-wrapper{
+            display: block;
+            position: absolute;
+            top: 42.5%;
+            left: 50%;
+            transform: translate(-50%, -42.5%);
 
+            button{
+               background: transparent;
+               background-color: #ff0000bd;
+                padding: 12px 42px;
+                border: none;
+                border-radius: 20px;
 
+                a{
+                    text-decoration: none;
+                    font-size: 1.5em;
+                    color: #ffffff;
+                }
+                
+            }
+    
+        }
+    
+   
+    
+    
+    
+    }
 }
