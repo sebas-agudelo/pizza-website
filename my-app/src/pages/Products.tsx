@@ -17,7 +17,7 @@ const fetProducts = async () => {
     console.log(data);
 };
   return (
-    <div>
+    <div className='products-wrapper'>
       All products
       {products.length === 0 ? (
                 <div>Laddar.......</div>
