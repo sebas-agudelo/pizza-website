@@ -1,10 +1,14 @@
 .login-container {
   
-    height: 100dvh;
+    height: 100dvh ;
+    // height: calc(100dvh - 80px);
+    // padding: 20px 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: static;
+    background-color: #ffb700;
 
     .login-content {
         width: 90vw;

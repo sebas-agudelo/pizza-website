@@ -2,12 +2,16 @@
 @use './Login//login';
 @use './Home/home';
 @use './Products/products';
+@use './Contact/Contact';
+@use './Footer/Footer';
+
 
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    // background-color: rgb(66, 66, 66);
 }
 
 body{
