@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { IProducts } from '../module/products';
 
-export default function Products() {
+interface ProductsProps {
+  className?: string; // Gör className optional
+}
+
+export default function Products({className}: ProductsProps) {
   const [products, setProduct] = useState<IProducts[]>([]); 
 
   useEffect(() => {
@@ -17,7 +21,7 @@ const fetProducts = async () => {
     console.log(data);
 };
   return (
-    <div className='products-wrapper'>
+    <div className={`products-wrapper ${className}`}>
       All products
       {products.length === 0 ? (
                 <div>Laddar.......</div>

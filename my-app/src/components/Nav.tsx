@@ -1,13 +1,27 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
+interface IPropos{
+    toggleHomeVisibility: any
+}
 
-export default function Nav() {
+export default function Nav({ toggleHomeVisibility }: IPropos) {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState(0);
 
-    const open = () => setIsOpen(true);
+    const open = () => {
+        setIsOpen(true);
+        toggleHomeVisibility(true);
+        setScrollPosition(window.scrollY);
+        document.body.classList.add('hide-scroll'); 
+    };
 
-    const close = () => setIsOpen(false)
+    const close = () => {
+        setIsOpen(false);
+        toggleHomeVisibility(false);
+        window.scrollTo(0, scrollPosition); // Återställ scrollposition
+        document.body.classList.remove('hide-scroll'); 
+    };
 
     return (<>
         <nav>
@@ -47,7 +61,7 @@ export default function Nav() {
 
             {isOpen && (
                 <div className='links'>
-                    <ul>
+                    <ul onClick={close}>
                         <li>
                             <Link to={`/`}>Hem</Link>
                         </li>
@@ -61,6 +75,101 @@ export default function Nav() {
                         <li>
                             <Link to={`/kontakt`}>Kontakt oss</Link>
                         </li>
+                        <li>
+                            <Link to={`/`}>Hem</Link>
+                        </li>
+
+                        <li>
+                            <Link to={`/pizzor`}>Meny</Link>
+                        </li>
+                        <li>
+                            <Link to={``}>Om oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/kontakt`}>Kontakt oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/`}>Hem</Link>
+                        </li>
+
+                        <li>
+                            <Link to={`/pizzor`}>Meny</Link>
+                        </li>
+                        <li>
+                            <Link to={``}>Om oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/kontakt`}>Kontakt oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/`}>Hem</Link>
+                        </li>
+
+                        <li>
+                            <Link to={`/pizzor`}>Meny</Link>
+                        </li>
+                        <li>
+                            <Link to={``}>Om oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/kontakt`}>Kontakt oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/`}>Hem</Link>
+                        </li>
+
+                        <li>
+                            <Link to={`/pizzor`}>Meny</Link>
+                        </li>
+                        <li>
+                            <Link to={``}>Om oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/kontakt`}>Kontakt oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/`}>Hem</Link>
+                        </li>
+
+                        <li>
+                            <Link to={`/pizzor`}>Meny</Link>
+                        </li>
+                        <li>
+                            <Link to={``}>Om oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/kontakt`}>Kontakt oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/`}>Hem</Link>
+                        </li>
+
+                        <li>
+                            <Link to={`/pizzor`}>Meny</Link>
+                        </li>
+                        <li>
+                            <Link to={``}>Om oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/kontakt`}>Kontakt oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/`}>Hem</Link>
+                        </li>
+
+                        <li>
+                            <Link to={`/pizzor`}>Meny</Link>
+                        </li>
+                        <li>
+                            <Link to={``}>Om oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/kontakt`}>Kontakt oss</Link>
+                        </li>
+                        <li>
+                            njasbndj
+                        </li>
+
                     </ul>
                 </div>
             )}

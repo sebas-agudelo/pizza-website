@@ -14,13 +14,22 @@ import AdminSignin from './pages/AdminSignin';
 import UserSignin from './pages/UserSignin';
 
 function App() {
+
+    const [showHome, setShowHome] = useState(false);
+
+    const toggleHomeVisibility = (isOpen: boolean) => {
+        setShowHome(isOpen);
+    };
+
     return (
         <div className="App">
+           
             <BrowserRouter>
-            <Nav />
+            <Nav toggleHomeVisibility={toggleHomeVisibility} />
+      
                 <Routes>
-                    <Route path='/' element={<Home />}/>
-                    <Route path='pizzor' element={<Products />}/>
+                    <Route path='/' element={<Home  className={showHome ? 'hidden' : ""}/>}/>
+                    <Route path='pizzor' element={<Products className={showHome ? 'hidden' : ""}/>}/>
                     <Route path='/kontakt' element={<Contact />}/>
 
                     {/* ALLT OM ADMIN */}
@@ -32,8 +41,9 @@ function App() {
                     <Route path='/login' element={<UserSignin />}/>
                     <Route />
                 </Routes>
+              
             </BrowserRouter>
-        </div>
+                </div>
     );
 }
 

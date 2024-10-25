@@ -3,11 +3,14 @@ import Nav from '../components/Nav';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
+interface HomeProps {
+    className?: string; // Gör className optional
+  }
 
-export default function Home() {
+export default function Home({className}: HomeProps) {
 
     return (
-        <div className='home'>
+        <div className={`home ${className}`}>
             
             <div className='hero-img'>
                 <img src="/hero-img.jpg" alt="" />
