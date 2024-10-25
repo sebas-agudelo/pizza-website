@@ -169,6 +169,22 @@ export default function Nav({ toggleHomeVisibility }: IPropos) {
                         <li>
                             njasbndj
                         </li>
+                        <li>
+                            <Link to={`/`}>Hem</Link>
+                        </li>
+
+                        <li>
+                            <Link to={`/pizzor`}>Meny</Link>
+                        </li>
+                        <li>
+                            <Link to={``}>Om oss</Link>
+                        </li>
+                        <li>
+                            <Link to={`/kontakt`}>Kontakt oss</Link>
+                        </li>
+                        <li>
+                            njasbndj
+                        </li>
 
                     </ul>
                 </div>
