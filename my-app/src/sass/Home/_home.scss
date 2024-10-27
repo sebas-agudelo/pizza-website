@@ -2,7 +2,7 @@
 .home {
     position: relative;
     width: 100%;
- height: 100vh;
+    height: 100dvh;
 
     .hero-img{
         width: 100%;
@@ -11,8 +11,35 @@
         img{
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            object-position: 35%;
         }
     }
+
+    .h2-gusto-pizza{
+        position: absolute;
+        top: 50%;
+        color: rgb(246, 255, 0);
+        font-size: 3.3rem;
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // animation: slide-in 150ms ease forwards; /* Applicera animationen */
+
+        // opacity: 0;
+        
+    }
+
+    // @keyframes slide-in {
+    //     from {
+    //         transform: translate(-150%, -50%); /* Börjar 150% till vänster */
+    //         opacity: 0; /* Börjar osynlig */
+    //     }
+    //     to {
+    //         transform: translate(-50%, -50%); /* Slutar på sin centrala position */
+    //         opacity: 1; /* Blir synlig */
+    //     }
+    // }
 
     .home-categories-wrapper {
         width: 100%;
@@ -86,13 +113,23 @@
 @media screen and (min-width: 768px) {
     .home {
         width: 100%;
-        height: calc(100vh - auto);  
-   
-        // img {
-        //     width: 100%;
-        //     height: 100%;
+        height: calc(100vh - 90px);  
+        display: flex;
+        flex-wrap: wrap;
+        
+        .hero-img{
+            width: 100%;
+            height: 100vh;
+    
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
 
-        // }
+        .h2-gusto-pizza{
+            display: none;
+        }
 
         // .btn-wrapper {
         //     display: block;

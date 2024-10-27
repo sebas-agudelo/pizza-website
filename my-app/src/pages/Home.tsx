@@ -10,11 +10,14 @@ interface HomeProps {
 export default function Home({className}: HomeProps) {
 
     return (
-        <div className={`home ${className}`}>
+        <div className='home'>
             
             <div className='hero-img'>
-                <img src="/hero-img.jpg" alt="" />
+                <img src="/Hero2.jpg" alt="" />
             </div>
+            
+
+            <h2 className={`h2-gusto-pizza ${className}`}>VÄLKOMMEN TILL GUSTO PIZZA</h2>
 
 
             {/* <div className='btn-wrapper'>

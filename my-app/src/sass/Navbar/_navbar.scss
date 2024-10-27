@@ -1,28 +1,27 @@
 nav {
     width: 100%;
-    height: auto;
-    background-color: #B8001F;
+    height: 90px;
+    background-color: #00000079;
+    // background-color: #B8001F;
+    z-index: 1000;
     position: fixed;
-    z-index: 999;
-
-
+    top: 0;
 
 
     .logo-and-user-wrapper {
-        height: 100vh;
-        max-height: 90px;
+        height: 100%;
+        max-height: 100%;
         width: 100%;
-        background-color: #B8001F;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-
+        justify-content: space-between;
 
         .logo {
             width: 17%;
+            min-width: 65px;
             height: auto;
             max-height: 90px;
+            z-index: 1005;
+
 
             img {
                 width: 100%;
@@ -33,17 +32,51 @@ nav {
         }
 
         ul {
-            width: 83%;
             display: flex;
             flex-flow: wrap;
             justify-content: end;
             max-height: 100%;
             align-items: center;
 
-
             li {
                 list-style: none;
-                margin: 0 0.5rem 0 0.5rem;
+                color: #ffffff;
+
+                .fa-magnifying-glass,
+                .fa-user,
+                .fa-cart-plus,
+                .mobile-menu-burger,
+                .mobile-menu-close {
+                    font-size: 1.2rem;
+                    margin: 0 1.5rem 0 1.5rem;
+                }
+
+                .mobile-menu-burger {
+                    font-size: 1.4rem;
+                    opacity: 1;
+                    transition: opacity 150ms linear 150ms;
+                }
+
+                .mobile-menu-burger.hidden {
+                    opacity: 0;
+                }
+
+                .mobile-menu-close {
+                    font-size: 2rem;
+                    position: absolute;
+                    top: 50%;
+                    right: 0%;
+                    transform: translateY(-50%);
+                    z-index: -1;
+                    opacity: 0;
+                    transition: opacity 150ms linear 150ms;
+
+                }
+
+                .mobile-menu-close.active {
+                    opacity: 1;
+                    z-index: 1002;
+                }
 
                 a {
                     text-decoration: none;
@@ -56,17 +89,167 @@ nav {
     .links {
         width: 100%;
         height: 100dvh;
-        max-height: calc(100dvh - 90px);
+        max-height: 100dvh;
         overflow-y: auto;
-        background-color: #ffffff;
+        background-color: #00000079;
+        position: absolute;
+        top: 0;
+        right: -100%;
+
+        visibility: hidden;
+        transition: right 750ms ease, visibility 750ms linear 0ms;
 
 
-        &::-webkit-scrollbar {
-            display: none;
+        .div {
+            height: 90px;
+            width: 100%;
+            background-color: #B8001F;
+            // background-color: #000000d2;
+            // background-color: #ffd00017;
+
+
+
         }
 
 
 
-        ul {}
+        ul {
+
+            list-style: none;
+            position: fixed;
+            height: 100dvh;
+            max-height: calc(100dvh - 90px);
+            width: 100%;
+
+            overflow: scroll;
+            margin-top: 9rem;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            li {
+                list-style: none;
+                margin-bottom: 2rem;
+                margin-left: 9rem;
+
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+    }
+
+    .links.active {
+        right: 0%;
+        visibility: visible; // Ensure visibility is set to visible when active
+        // transition: left 550ms ease, visibility 550ms ; /* No delay on visibility when active */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        height: 70px;
+
+        .logo-and-user-wrapper {
+            height: 100%;
+            max-height: 70px;
+
+
+            .logo {
+
+
+                width: 5%;
+                max-height: 70px;
+
+            }
+
+
+
+
+
+
+
+
+            .mobile-menu-close {
+                position: absolute;
+                // top: 50%;
+                right: 1%;
+                z-index: -1;
+                color: white;
+                opacity: 0;
+
+                transition: opacity 350ms linear 350ms;
+            }
+
+            .mobile-menu-close.active {
+                opacity: 1;
+                z-index: 1002;
+            }
+
+            .mobile-menu-burger {
+                color: #ffffff;
+                opacity: 1;
+                z-index: 1002;
+            }
+
+            .mobile-menu-burger.hidden {
+                opacity: 0;
+            }
+
+
+
+        }
+
+        .links {
+            width: 35%;
+            height: 100dvh;
+            max-height: 100dvh;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            z-index: 1001;
+            // transition: all 3s linear;
+            visibility: hidden;
+            transition: right 750ms ease, visibility 750ms linear 0ms;
+
+            .div {
+                height: 70px;
+                width: 100%;
+                background-color: #B8001F;
+
+
+
+            }
+
+            ul {
+                list-style: none;
+                position: fixed;
+                height: 100dvh;
+                max-height: calc(100dvh - 90px);
+                width: 35%;
+                z-index: 1002;
+                overflow: scroll;
+
+                li {
+                    padding: 15px 0 15px 25px;
+
+                    a {
+                        text-decoration: none;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+
+        .links.active {
+            right: 0%;
+            visibility: visible; // Ensure visibility is set to visible when active
+            
+        }
+
     }
 }
