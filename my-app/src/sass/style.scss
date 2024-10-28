@@ -22,9 +22,23 @@ body {
 }
 
 .hidden {
-    visibility: hidden; 
+    // visibility: hidden; 
+  animation: slide-in 750ms ease forwards; /* Applicera animationen */
+
+        opacity: 1;
     
 }
+
+ @keyframes slide-in {
+        from {
+            transform: translate(-50%, -50%); /* Börjar 150% till vänster */
+            opacity: 1; /* Börjar osynlig */
+        }
+        to {
+            transform: translate(-100%, -50%); /* Slutar på sin centrala position */
+            opacity: 0; /* Blir synlig */
+        }
+    }
 
 body.hide-scroll {
     overflow: hidden; /* Döljer scrollningen på hela sidan */

@@ -4,11 +4,11 @@
     width: 100%;
     height: 100dvh;
 
-    .hero-img{
+    .hero-img {
         width: 100%;
         height: 100vh;
 
-        img{
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -16,7 +16,7 @@
         }
     }
 
-    .h2-gusto-pizza{
+    .h2-gusto-pizza {
         position: absolute;
         top: 50%;
         color: rgb(246, 255, 0);
@@ -24,22 +24,7 @@
         width: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
-        // animation: slide-in 150ms ease forwards; /* Applicera animationen */
-
-        // opacity: 0;
-        
     }
-
-    // @keyframes slide-in {
-    //     from {
-    //         transform: translate(-150%, -50%); /* Börjar 150% till vänster */
-    //         opacity: 0; /* Börjar osynlig */
-    //     }
-    //     to {
-    //         transform: translate(-50%, -50%); /* Slutar på sin centrala position */
-    //         opacity: 1; /* Blir synlig */
-    //     }
-    // }
 
     .home-categories-wrapper {
         width: 100%;
@@ -47,64 +32,72 @@
         display: flex;
         flex-flow: wrap;
         justify-content: center;
- 
+
         h2 {
-            margin: 0 0 1rem 0;
+            // margin: 0 0 1rem 0;
+            padding: 2.5rem 0;
         }
-    
-        .category {  
+
+        .category {
             width: 100%;
             height: auto;
             display: flex;
             flex-wrap: wrap;
 
             article {
-                width: calc(100% / 2 - 1rem);
+                // width: calc(100% / 2 - 0.4rem);
+                width: 100%;
                 height: auto;
                 max-height: auto;
-                margin: 0 0.5rem 0 0.5rem;
-                padding: 1rem 0 1rem 0;
-                box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-                
+                margin: 0 0.2rem 1.5rem 0.2rem;
+                padding: 0 0 2rem 0;
+                // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+                border-radius: 0.5rem;
+              
+
                 img {
                     width: 100%;
-            
+                    border-radius: 0.5rem;
+
+
                 }
-    
+
                 &:hover {
                     cursor: pointer;
                 }
 
-                h3{
+                h3 {
                     text-align: center;
-                    color: #000000
+                    color: #000000;
+                    margin: 1rem 0 0 0;
+                    font-size: 1.5rem;
                 }
             }
-         
+
         }
     }
-    
-    .video{
+
+    .video {
         width: 100%;
 
 
-        video{
+        video {
             width: 100%;
         }
     }
 
-    .short-bussiness-description{
+    .short-bussiness-description {
         width: 100%;
         padding: 0 0.5rem 0 0.5rem;
-        h2{
+
+        h2 {
             text-align: center;
             margin: 0 0 1rem 0;
         }
 
-        p{
-            
-        }
-    }   
+        p {}
+    }
 }
 
 ;
@@ -113,22 +106,22 @@
 @media screen and (min-width: 768px) {
     .home {
         width: 100%;
-        height: calc(100vh - 90px);  
+        height: calc(100vh - 90px);
         display: flex;
         flex-wrap: wrap;
-        
-        .hero-img{
+
+        .hero-img {
             width: 100%;
             height: 100vh;
-    
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
             }
         }
 
-        .h2-gusto-pizza{
-            display: none;
+        .h2-gusto-pizza {
+            // display: none;
         }
 
         // .btn-wrapper {
@@ -159,19 +152,19 @@
             display: flex;
             flex-flow: wrap;
             justify-content: center;
-        
+
             h2 {
                 font-size: 2em;
             }
-        
-            .category {  
+
+            .category {
                 width: 90%;
                 height: auto;
                 display: flex;
                 flex-wrap: wrap;
-      
-                
-            
+
+
+
                 article {
                     width: calc(100% / 3 - 2rem);
                     margin: 0 1rem 10px;
@@ -179,22 +172,22 @@
                     height: 300px;
                     max-height: 500px;
                     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-                    
+
                     img {
                         // padding: 0 15px;
                         width: 100%;
-                  
+
 
                     }
-        
+
                     &:hover {
                         cursor: pointer;
                     }
                 }
-             
+
             }
         }
-        
+
 
         // .short-pizza-description{
         //     width: 100%;
@@ -209,7 +202,7 @@
         //     h2{
         //         margin: 0 0 35px;
         //         font-size: 2.5em;
-                
+
         //     }
 
         //    p{
@@ -217,24 +210,23 @@
         //     font-size: 1.4rem;
         //    }
         // }
-        
 
 
 
-            
-            // .video{
-            //     width: 100vw;               
-                
 
-            //     video {
-            //       width: 100%;
-            
-            
-            //     }
-            // }
-          
-          
-          
+
+        // .video{
+        //     width: 100vw;               
+
+
+        //     video {
+        //       width: 100%;
+
+
+        //     }
+        // }
+
+
+
     }
 }
-
