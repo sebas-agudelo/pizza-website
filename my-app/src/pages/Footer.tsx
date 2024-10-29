@@ -33,11 +33,11 @@ export default function Footer() {
           <p><i className="fa-regular fa-envelope"></i>: gustopizza@pizza.se</p>
         </div>
 
-        <div className='footer-logo-wrapper'>
+        {/* <div className='footer-logo-wrapper'>
           <div className='logo'>
             <img src="LOGO.png" alt="" />
           </div>
-        </div>
+        </div> */}
 
         <div className='social-media-icons'>
 

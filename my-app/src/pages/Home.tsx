@@ -12,8 +12,8 @@ export default function Home({ className }: HomeProps) {
     const [isFullyScrolled, setIsFullyScrolled] = useState(false);
 
     useEffect(() => {
-        // const categoriesWrapper = document.querySelector('.short-bussiness-description');
-        const homeCategoriesWrapper = document.querySelector('.home-categories-wrapper')
+        const categoriesWrapper = document.querySelector('.short-bussiness-description');
+        const homeCategoriesWrapper = document.querySelector('.home-categories-wrapper');
 
         if (homeCategoriesWrapper === null) {
             return;
@@ -22,7 +22,7 @@ export default function Home({ className }: HomeProps) {
         let lastScrollY = window.scrollY;
 
         const checkVisibility = () => {
-            const rect = homeCategoriesWrapper?.getBoundingClientRect();
+            const rect = homeCategoriesWrapper.getBoundingClientRect();
             const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
             const scrollOffset = 0;
 
@@ -79,6 +79,16 @@ export default function Home({ className }: HomeProps) {
                 </div>
             </div>
 
+            <div className={`short-bussiness-description ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
+                <h2>SVERIGES BÄSTA GUSTO PIZZA</h2>
+
+                <p>Välkommen till Sveriges bästa Gusto Pizza – där passion för hantverkspizza och kvalitetsingredienser möts för att skapa en smakupplevelse utöver det vanliga. På Gusto Pizza serverar vi allt från klassiska favoriter till innovativa smakkombinationer, alltid tillagade med färska, noggrant utvalda råvaror. Våra pizzor bakas i stenugn för den perfekta, krispiga botten och toppas med omsorg för att lyfta fram varje smaknyans.
+                    <br /><br />
+                    Oavsett om du är sugen på en traditionell Margherita eller vill utforska nya spännande smakäventyr, har Gusto Pizza något för alla. Vi erbjuder dessutom veganska och vegetariska alternativ som får dig att vilja komma tillbaka igen och igen. Besök oss för en äkta pizzaupplevelse där kvalitet, smak och service står i fokus – för en pizza som är lite bättre, lite godare och helt enkelt Gusto!
+
+                </p>
+            </div>
+
 
             <div className='video'>
 
@@ -88,10 +98,14 @@ export default function Home({ className }: HomeProps) {
                 </video>
             </div>
 
+         
 
 
-            {/* 
-            <Footer /> */}
+
+            
+            <Footer />
         </div>
     );
 }
+
+
