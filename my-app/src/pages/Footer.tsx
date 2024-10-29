@@ -4,13 +4,10 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <footer>
-
       <div className='footer-order-wrapper'>
+        <h2>Beställ från Gusto Pizza nu!</h2>
+
         <div className='order-btns'>
-          <h2>Beställ från Gusto Pizza nu!</h2>
-
-
-
           <button>
             <Link to={`/pizzor`}>Avhämtning</Link>
           </button>
@@ -29,8 +26,16 @@ export default function Footer() {
 
         <div className='footer-contact-wrapper'>
           <h2>Kontakt</h2>
-          <p><i className="fa-solid fa-phone"></i>: 070-000-00-00</p>
-          <p><i className="fa-regular fa-envelope"></i>: gustopizza@pizza.se</p>
+          <p>
+            <a href="tel:0700000000">
+              <i className="fa-solid fa-phone"></i>: 070-000-00-00
+            </a>
+          </p>
+          <p>
+            <a href="mailto:gustopizza@pizza.se">
+              <i className="fa-regular fa-envelope"></i>: gustopizza@pizza.se
+            </a>
+          </p>
         </div>
 
         {/* <div className='footer-logo-wrapper'>
@@ -41,9 +46,9 @@ export default function Footer() {
 
         <div className='social-media-icons'>
 
-            <div><i className="fa-brands fa-instagram"></i></div>
-            <div><i className="fa-brands fa-facebook-f"></i></div>
-            <div><i className="fa-brands fa-tiktok"></i></div>
+          <div><i className="fa-brands fa-instagram"></i></div>
+          <div><i className="fa-brands fa-facebook-f"></i></div>
+          <div><i className="fa-brands fa-tiktok"></i></div>
 
         </div>
 

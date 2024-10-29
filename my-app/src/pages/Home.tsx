@@ -66,13 +66,13 @@ export default function Home({ className }: HomeProps) {
                     </article>
                     <article>
                         <div className='home-product-img'>
-                            <img src="/pizza-3525673_1920.jpg" alt="" />
+                            <img src="pizza-5275191_1920.jpg" alt="" />
                         </div>
                         <h3>Vegansk Pizza</h3>
                     </article>
                     <article>
                         <div className='home-product-img'>
-                            <img src="/pizza-3525673_1920.jpg" alt="" />
+                            <img src="pizza-1344720_1920.jpg" alt="" />
                         </div>
                         <h3>Timmo Pizza</h3>
                     </article>
@@ -89,7 +89,6 @@ export default function Home({ className }: HomeProps) {
                 </p>
             </div>
 
-
             <div className='video'>
 
                 <video autoPlay muted loop>
@@ -98,11 +97,6 @@ export default function Home({ className }: HomeProps) {
                 </video>
             </div>
 
-         
-
-
-
-            
             <Footer />
         </div>
     );
