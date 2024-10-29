@@ -74,15 +74,15 @@ export default function Nav({ toggleHomeVisibility }: IProps) {
                         <li>
                             <i className="fa-solid fa-magnifying-glass"></i>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to={`/login`}><i className="fa-regular fa-user"></i></Link>
-                        </li>
+                        </li> */}
                         {/* <li>
                             <Link to={``}>Logga ut</Link>
                         </li> */}
-                        <li>
+                        {/* <li>
                             <Link to={``}><i className="fa-solid fa-cart-plus"></i></Link>
-                        </li>
+                        </li> */}
                         <li>
                             <i className={`fa-solid fa-bars mobile-menu-burger ${isOpen ? 'hidden' : ''}`} onClick={open}></i>
                             <i className={`fa-solid fa-xmark mobile-menu-close ${isOpen ? 'active' : ''}`} onClick={close}></i>
