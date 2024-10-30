@@ -96,7 +96,7 @@ export default function Home({ className }: HomeProps) {
                 </p>
 
                 <div className='app-desc-img'>
-                    <img src="pexels-monserratsoldu-1560657.jpg" alt="" />
+                    <img src="street-6099209_1920.jpg" alt="" />
                 </div>
                 
                 <Link to={`/pizzor`}>Vår meny</Link>
@@ -105,13 +105,15 @@ export default function Home({ className }: HomeProps) {
 
             <div className={`video ${isVisible && !isFullyScrolled ? 'visible' : ''}`} >
 
+                  {/* <h2>KOM IN TILL OSS PÅ GUSTO PIZZA</h2>   */}
+
                 <video autoPlay muted loop>
                     <source src="pizza-video3.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
 
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }

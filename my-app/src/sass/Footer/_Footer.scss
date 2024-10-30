@@ -1,38 +1,46 @@
 footer{
-    position: relative;
-    background-color: #000000d3;
-    z-index: -1;
-    padding: 7rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // position: relative;
+    // background-color: #000000d3;
+    // background-color: #2b1d1d;
+    // position: relative;
+    // z-index: -1;
+    // padding: 7rem 1rem;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     // align-items: center;
     
     
     height: 100vh;
+    padding: 2rem 0;
 
     
-    .img-bkg{
-        position: absolute;
-        top: 0;    
-        left: 0;
+    // .img-bkg{
+    //     position: absolute;
+    //     top: 0;    
+    //     left: 0;
 
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        object-fit: cover;
+    //     height: 100%;
+    //     width: 100%;
+    //     z-index: -1;
+    //     object-fit: cover;
         
-        img{
-            height: 100%;
-            width: 100%;
-            opacity: 0.2;
-        }
-    }
+    //     img{
+    //         height: 100%;
+    //         width: 100%;
+    //         opacity: 0.2;
+    //     }
+    // }
     .footer-order-wrapper{
         h2{
-            color: #ffffff;
-            font-size: 2rem;
+            color: #2b1d1d;
+            font-size: 3.5rem;
             text-align: center;
+            // position: absolute;
+            // top: -6%;
+            // left: 37%;
+            // transform: translate(-37%, 6%);
+            // z-index: 1020;
         }
 
         .order-btns{
@@ -52,7 +60,7 @@ footer{
                 a{
                     text-decoration: none;
                     font-size: 1.1rem;
-                    color: #ffffff;
+                    color: #2b1d1d;
                 }
             }
         }
@@ -67,7 +75,7 @@ footer{
             h2{
                 font-size: 1.7em;
                 margin-bottom: 1rem;
-                color: #ffffff;
+                color: #2b1d1d;
             }
             
             p{  
@@ -75,7 +83,7 @@ footer{
                 margin-bottom: 2rem;
                 
                 a{
-                    color: #ffffff;
+                    color: #2b1d1d;
                     text-decoration: none;
                 }
             }

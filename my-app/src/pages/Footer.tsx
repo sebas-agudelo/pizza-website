@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <footer>
-      <div className='img-bkg'> 
+      {/* <div className='img-bkg'> 
         <img src="pexels-arthurbrognoli-3343627.jpg" alt="" />
-      </div>
+      </div> */}
       <div className='footer-order-wrapper'>
-        <h2>Beställ från Gusto Pizza nu!</h2>
+        <h2>Gusto Pizza</h2>
 
         <div className='order-btns'>
           <button>
-            <Link to={`/pizzor`}>Avhämtning</Link>
+            <Link to={`/pizzor`}>Vår meny</Link>
           </button>
-          <button>
+          {/* <button>
             <Link to={`https://www.foodora.se/`}>Hemleverans</Link>
-          </button>
+          </button> */}
 
         </div>
 
@@ -40,7 +40,12 @@ export default function Footer() {
             </a>
           </p>
         </div>
-
+        
+        <div className='open-times'>
+          <p>Mån - Fre 10:30 - 21:00</p>
+          <p>Lör - 11:30 - 22:00</p>
+          <p>Sön - stängd</p>
+        </div>
         {/* <div className='footer-logo-wrapper'>
           <div className='logo'>
             <img src="LOGO.png" alt="" />
