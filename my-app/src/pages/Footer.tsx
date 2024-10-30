@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <footer>
+      <div className='img-bkg'> 
+        <img src="pexels-arthurbrognoli-3343627.jpg" alt="" />
+      </div>
       <div className='footer-order-wrapper'>
         <h2>Beställ från Gusto Pizza nu!</h2>
 

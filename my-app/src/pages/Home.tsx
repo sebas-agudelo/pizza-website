@@ -14,15 +14,22 @@ export default function Home({ className }: HomeProps) {
     useEffect(() => {
         const categoriesWrapper = document.querySelector('.short-bussiness-description');
         const homeCategoriesWrapper = document.querySelector('.home-categories-wrapper');
+        const video = document.querySelector('.video');
 
         if (homeCategoriesWrapper === null) {
             return;
         }
 
+        if(video === null){
+            return;
+        };
+
+
         let lastScrollY = window.scrollY;
 
         const checkVisibility = () => {
-            const rect = homeCategoriesWrapper.getBoundingClientRect();
+            let rect = homeCategoriesWrapper.getBoundingClientRect();
+            // let rect = video.getBoundingClientRect();
             const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
             const scrollOffset = 0;
 
@@ -87,9 +94,16 @@ export default function Home({ className }: HomeProps) {
                     Oavsett om du är sugen på en traditionell Margherita eller vill utforska nya spännande smakäventyr, har Gusto Pizza något för alla. Vi erbjuder dessutom veganska och vegetariska alternativ som får dig att vilja komma tillbaka igen och igen. Besök oss för en äkta pizzaupplevelse där kvalitet, smak och service står i fokus – för en pizza som är lite bättre, lite godare och helt enkelt Gusto!
 
                 </p>
+
+                <div className='app-desc-img'>
+                    <img src="pexels-monserratsoldu-1560657.jpg" alt="" />
+                </div>
+                
+                <Link to={`/pizzor`}>Vår meny</Link>
+
             </div>
 
-            <div className='video'>
+            <div className={`video ${isVisible && !isFullyScrolled ? 'visible' : ''}`} >
 
                 <video autoPlay muted loop>
                     <source src="pizza-video3.mp4" type="video/mp4" />
@@ -97,7 +111,7 @@ export default function Home({ className }: HomeProps) {
                 </video>
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

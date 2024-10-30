@@ -40,12 +40,13 @@
         flex-flow: wrap;
         justify-content: center;
         margin: 0.5rem 0;
+        padding: 2rem 0 0 0;
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 0.6s linear, transform 0.6s linear;
+     
 
         p {
-            padding: 1rem 0;
             font-size: 2.7rem;
             color: #502314;
         }
@@ -61,8 +62,8 @@
                 // position: relative;
                 width: 100%;
                 height: auto;
-                margin: 0 0 1.5rem 0;
-                padding: 0.7rem;
+                margin: 1rem 0 0 0;
+                padding: 1rem;
                 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
                 border-radius: 0.5rem;
                 overflow: hidden;
@@ -104,6 +105,8 @@
         width: 100%;
         height: 400px;
         max-height: 400px;
+        margin-bottom: 0.5rem;
+      
 
         video {
             width: 100%;
@@ -116,17 +119,42 @@
     .short-bussiness-description {
         width: 100%;
         padding: 0 0.5rem 0 0.5rem;
-        padding-bottom: 2rem;
+        padding: 2rem 0 0 0;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h2 {
             text-align: center;
-            margin: 0 0 1rem 0;
+            // margin: 0 0 1rem 0;
             font-size: 1.7rem;
         }
 
         p {
-            font-size: 1.2rem;
-            padding: 0 0.5rem;
+            font-size: 1.3rem;
+            padding: 3rem 1rem;
+        }
+
+        .app-desc-img{
+            width: 100%;
+            height: 35vh;
+            padding: 0 0 1rem 0;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover; 
+                object-position: 30%;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.3rem;
+            border-bottom: 1px solid;
+
         }
     }
 };
