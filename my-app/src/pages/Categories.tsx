@@ -8,7 +8,7 @@ export default function Categories() {
 
     useEffect(() => {
         const fectFunction = async () => {
-            const res = await fetch('http://localhost:3001/getAllCategories');
+            const res = await fetch('https://pizza-website-wona.vercel.app/getAllCategories');
             const data = await res.json();
             setCategories(data);
 
