@@ -2,19 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { ICategories } from '../module/ICategories';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
+import { IoAddCircleOutline } from "react-icons/io5";
+import { IProducts } from '../module/products';
 
 export default function Categories() {
     const [categories, setCategories] = useState<ICategories[]>([]);
-
     useEffect(() => {
         const fectFunction = async () => {
-            const res = await fetch('https://pizza-website-wona.vercel.app/getAllCategories');
+            const res = await fetch('http://localhost:3001/get_categories_with_products');
             const data = await res.json();
             setCategories(data);
 
-        }
+        };
 
         fectFunction()
+
     }, [])
 
     return (
@@ -34,16 +36,27 @@ export default function Categories() {
 
 
             <section className='app-category-content-wrapper'>
-            {categories.map((category, index) => (
-                <article key={index}>
 
-                    <div className='app-category-img'>
-                        <img src={category.category_img} alt={category.category_name} />
-                    </div>
+                {categories.map((category, index) => (
+                    <article key={index}>
 
-                    <span><Link to={``}>{category.category_name}</Link></span>
-                </article>
-            ))}
+                        <span>{category.category_name}</span>
+
+                        <section className='app-products-wrapper'>
+                            {category.products.map((product, index) => (
+                                <article className='app-products-info-wrapper' key={index}>
+                                    <span>{product.product_name}</span>
+                                    <div className='app-product-info'>
+                                        <span>{product.product_price}kr</span>
+                                        <span><IoAddCircleOutline /></span>
+                                    </div>
+                                </article>
+
+                            ))}
+                        </section>
+                    </article>
+                ))}
+
             </section>
 
             <Footer />

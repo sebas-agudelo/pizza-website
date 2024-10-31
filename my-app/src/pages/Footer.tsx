@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <footer>
-      <svg width="300" height="80">
+      {/* <svg width="300" height="80">
         <defs>
           <path id="text-curve" d="M 50,108 A 75,50 0 1,1 250,100" />
         </defs>
@@ -13,7 +13,7 @@ export default function Footer() {
             Gusto Pizza
           </textPath>
         </text>
-      </svg>
+      </svg> */}
 
 
       <div className='app-actions-and-map'>
