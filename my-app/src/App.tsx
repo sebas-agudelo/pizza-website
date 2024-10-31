@@ -12,6 +12,7 @@ import AdminPanel from './pages/AdminPanel';
 import AddProduct from './pages/AddProduct';
 import AdminSignin from './pages/AdminSignin';
 import UserSignin from './pages/UserSignin';
+import Categories from './pages/Categories';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
                     <Route path='/adminlogin' element={<AdminSignin />}/>
                     <Route path='/adminpanel' element={<AdminPanel />}/>
                     <Route path='/nyprodukt' element={<AddProduct />}/>
+                    <Route path='/meny' element={<Categories />}/>
 
                     {/* ALLT OM USER  */}
                     <Route path='/login' element={<UserSignin />}/>

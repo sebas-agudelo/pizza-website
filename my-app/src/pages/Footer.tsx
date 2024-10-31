@@ -11,9 +11,9 @@ export default function Footer() {
         <h2>Gusto Pizza</h2>
 
         <div className='order-btns'>
-          <button>
+          {/* <button>
             <Link to={`/pizzor`}>Vår meny</Link>
-          </button>
+          </button> */}
           {/* <button>
             <Link to={`https://www.foodora.se/`}>Hemleverans</Link>
           </button> */}

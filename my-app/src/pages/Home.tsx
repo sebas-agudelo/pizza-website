@@ -12,24 +12,16 @@ export default function Home({ className }: HomeProps) {
     const [isFullyScrolled, setIsFullyScrolled] = useState(false);
 
     useEffect(() => {
-        const categoriesWrapper = document.querySelector('.short-bussiness-description');
         const homeCategoriesWrapper = document.querySelector('.home-categories-wrapper');
-        const video = document.querySelector('.video');
 
         if (homeCategoriesWrapper === null) {
             return;
         }
 
-        if(video === null){
-            return;
-        };
-
-
         let lastScrollY = window.scrollY;
 
         const checkVisibility = () => {
             let rect = homeCategoriesWrapper.getBoundingClientRect();
-            // let rect = video.getBoundingClientRect();
             const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
             const scrollOffset = 0;
 
@@ -95,23 +87,27 @@ export default function Home({ className }: HomeProps) {
 
                 </p>
 
-                <div className='app-desc-img'>
-                    <img src="street-6099209_1920.jpg" alt="" />
+                <Link to={`/`}>Vår meny</Link>
+            </div>
+
+            <div className='app-media-wrapper'>
+                <div className={`video`} >
+
+                    <video autoPlay muted loop>
+                        <source src="pizza-video3.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-                
-                <Link to={`/pizzor`}>Vår meny</Link>
 
+                <div className='app-img-wrapper'>
+
+                    <div className='app-img'>
+                        <img src="street-6099209_1920.jpg" alt="" />
+                    </div>
+                </div>
             </div>
 
-            <div className={`video ${isVisible && !isFullyScrolled ? 'visible' : ''}`} >
 
-                  {/* <h2>KOM IN TILL OSS PÅ GUSTO PIZZA</h2>   */}
-
-                <video autoPlay muted loop>
-                    <source src="pizza-video3.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
 
             <Footer />
         </div>
