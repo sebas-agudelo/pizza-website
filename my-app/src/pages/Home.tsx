@@ -56,26 +56,26 @@ export default function Home({ className }: HomeProps) {
 
             <div className={`home-categories-wrapper ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
                 <p>FAVORITER</p>
-                <div className='category'>
+             
                     <article>
                         <div className='home-product-img'>
                             <img src="/kebabpizza.png" alt="" />
                         </div>
-                        <h3>Kebab Pizza</h3>
+                        <span>Kebab Pizza</span>
                     </article>
                     <article>
                         <div className='home-product-img'>
                             <img src="pizza-5275191_1920.jpg" alt="" />
                         </div>
-                        <h3>Margherita Pizza (Vegansk)</h3>
+                        <span>Margherita Pizza (Vegansk)</span>
                     </article>
                     <article>
                         <div className='home-product-img'>
                             <img src="pizza-1344720_1920.jpg" alt="" />
                         </div>
-                        <h3>Timmo Pizza</h3>
+                        <span>Timmo Pizza</span>
                     </article>
-                </div>
+                
             </div>
 
             <div className={`short-bussiness-description ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
