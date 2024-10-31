@@ -9,7 +9,7 @@ export default function Categories() {
     const [categories, setCategories] = useState<ICategories[]>([]);
     useEffect(() => {
         const fectFunction = async () => {
-            const res = await fetch('http://localhost:3001/get_categories_with_products');
+            const res = await fetch('https://pizza-website-wona.vercel.app/get_categories_with_products');
             const data = await res.json();
             setCategories(data);
 
