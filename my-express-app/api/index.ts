@@ -200,5 +200,24 @@ app.get('/getAllCategories', async (req: Request, res: Response) => {
     }
 });
 
+app.get('/get_categories_with_products', async (req: Request, res: Response) => {
+    try {
+        const { data: Categories, error } = await supabase
+            .from('Categories')
+            .select('*, products(*)') 
+            .order('id');
+
+        if (error) {
+            return res.status(500).json({ error: error.message });
+        }
+
+        return res.status(200).json(Categories);
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ error: 'Server error' });
+    }
+});
+
 
 app.listen(3001, () => console.log("Server ready on port 3001."));
