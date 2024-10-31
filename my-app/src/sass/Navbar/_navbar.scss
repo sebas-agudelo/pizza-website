@@ -103,7 +103,7 @@ nav {
         .div {
             height: 90px;
             width: 100%;
-            background-color: #B8001F;
+            background-color: #2d1208;
         }
 
 
@@ -201,8 +201,8 @@ nav {
 
         .links {
             width: 35%;
-            height: 100dvh;
-            max-height: 100dvh;
+            height: 100vh;
+            max-height: 100vh;
             position: fixed;
             top: 0;
             right: -100%;
@@ -214,7 +214,7 @@ nav {
             .div {
                 height: 70px;
                 width: 100%;
-                background-color: #B8001F;
+                background-color: #2d1208;
 
 
 
@@ -223,18 +223,17 @@ nav {
             ul {
                 list-style: none;
                 position: fixed;
-                height: 100dvh;
-                max-height: calc(100dvh - 90px);
+                height: 100vh;
+                max-height: 100vh;
                 width: 35%;
                 z-index: 1002;
                 overflow: scroll;
 
                 li {
-                    padding: 15px 0 15px 25px;
 
                     a {
                         text-decoration: none;
-                        color: #000000;
+                        color: #ffffff;
                     }
                 }
             }

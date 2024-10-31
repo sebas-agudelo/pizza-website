@@ -10,6 +10,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #2d1208;
     
     .app-actions-and-map{
 
@@ -26,7 +27,7 @@ footer{
                 
                 a{
                     font-size: 1rem;
-                    color: #000000b0;
+                    color: #ffffffb0;
                     text-decoration: none;
                     
                 }
@@ -44,6 +45,7 @@ footer{
         h2{
             text-align: start;
             font-size: 2rem;
+            color: #ffffffb0;
         }
 
         .contact-section{
@@ -53,7 +55,7 @@ footer{
 
                 a{
                     text-decoration: none;
-                    color: #000000b0;
+                    color: #ffffffb0;
                 }
             }
         }
@@ -62,6 +64,7 @@ footer{
             padding: $padding-pa;
             p{
                 padding: $padding-pa;
+                color: #ffffffb0;
             }
         }
 

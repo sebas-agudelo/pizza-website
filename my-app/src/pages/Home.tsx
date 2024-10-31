@@ -77,6 +77,7 @@ export default function Home({ className }: HomeProps) {
                     </article>
                 
             </div>
+            
 
             <div className={`short-bussiness-description ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
                 <h2>SVERIGES BÄSTA GUSTO PIZZA</h2>
