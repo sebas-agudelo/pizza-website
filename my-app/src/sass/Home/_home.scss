@@ -61,8 +61,8 @@
             article {
                 width: 100%;
                 height: auto;
-                margin: 0.5rem 0 0 0;
-                padding: 1rem;
+                margin: 1rem 0 0 0;
+                padding: 1rem 1.5rem;
                 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
                 border-radius: 0.5rem;
                 overflow: hidden;
@@ -78,7 +78,8 @@
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
-                        border-radius: 1rem 0 0 1rem;
+                        object-position: 0%;
+                        border-radius: 1rem;
                     }
                 }
 
@@ -139,9 +140,9 @@
 
         .video {
             width: 100%;
-            height: 400px;
-            max-height: 400px;
-            padding-bottom: 0.5rem;
+            height: 358px;
+            max-height: 358px;
+            padding-bottom: 1rem;
 
             video {
                 width: 100%;
