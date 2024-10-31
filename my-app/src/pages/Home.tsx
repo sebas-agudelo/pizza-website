@@ -91,13 +91,13 @@ export default function Home({ className }: HomeProps) {
             </div>
 
             <div className='app-media-wrapper'>
-                <div className={`video`} >
+                {/* <div className={`video`} >
 
                     <video autoPlay muted loop>
                         <source src="pizza-video3.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                </div>
+                </div> */}
 
                 <div className='app-img-wrapper'>
 
