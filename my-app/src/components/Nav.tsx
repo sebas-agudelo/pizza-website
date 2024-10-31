@@ -97,7 +97,7 @@ export default function Nav({ toggleHomeVisibility }: IProps) {
                         {/* <li><Link to={`/sss`}>s</Link></li>
                         <li><Link to={`/`}>Hem</Link></li> */}
                         <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
+                        <li><Link to={`/meny`}>Meny</Link></li>
                         <li><Link to={``}>Om oss</Link></li>
                         <li><Link to={`/kontakt`}>Kontakta oss</Link></li>
                         {/* <li><Link to={`/`}>Hem</Link></li>

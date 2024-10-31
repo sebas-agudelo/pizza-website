@@ -67,7 +67,7 @@ export default function Home({ className }: HomeProps) {
                         <div className='home-product-img'>
                             <img src="pizza-5275191_1920.jpg" alt="" />
                         </div>
-                        <h3>Vegansk Pizza</h3>
+                        <h3>Margherita Pizza (Vegansk)</h3>
                     </article>
                     <article>
                         <div className='home-product-img'>
@@ -87,7 +87,7 @@ export default function Home({ className }: HomeProps) {
 
                 </p>
 
-                <Link to={`/`}>Vår meny</Link>
+                <Link to={`/meny`}>Vår meny</Link>
             </div>
 
             <div className='app-media-wrapper'>

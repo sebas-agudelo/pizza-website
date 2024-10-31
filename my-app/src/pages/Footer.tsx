@@ -8,7 +8,7 @@ export default function Footer() {
         <defs>
           <path id="text-curve" d="M 50,108 A 75,50 0 1,1 250,100" />
         </defs>
-        <text font-size="40" font-family="Arial, sans-serif">
+        <text font-size="40" font-family="Arial, sans-serif" fill='#ffd900'>
           <textPath href="#text-curve" startOffset="50%" text-anchor="middle">
             Gusto Pizza
           </textPath>
@@ -19,7 +19,7 @@ export default function Footer() {
       <div className='app-actions-and-map'>
         <div className='order-btns'>
           <button>
-            <Link to={`/pizzor`}>Avhämtning</Link>
+            <Link to={`/meny`}>Avhämtning</Link>
           </button>
           <button>
             <Link to={`https://www.foodora.se/`}>Hemleverans</Link>
