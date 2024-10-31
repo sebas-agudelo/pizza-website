@@ -87,7 +87,7 @@ export default function Home({ className }: HomeProps) {
 
                 </p>
 
-                <Link to={`/meny`}>Vår meny</Link>
+                <a href={`/meny`}>Vår meny</a>
             </div>
 
             <div className='app-media-wrapper'>

@@ -19,10 +19,10 @@ export default function Footer() {
       <div className='app-actions-and-map'>
         <div className='order-btns'>
           <button>
-            <Link to={`/meny`}>Avhämtning</Link>
+            <a href={`/meny`}>Avhämtning</a>
           </button>
           <button>
-            <Link to={`https://www.foodora.se/`}>Hemleverans</Link>
+            <a href={`https://www.foodora.se/`}>Hemleverans</a>
           </button>
         </div>
 
