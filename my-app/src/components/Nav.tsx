@@ -1,9 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface IProps {
     toggleHomeVisibility: any;
 }
+
+export const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scrollar endast på `pathname` ändring
+    }, [pathname]);
+
+    return null;
+};
 
 export default function Nav({ toggleHomeVisibility }: IProps) {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,54 +23,58 @@ export default function Nav({ toggleHomeVisibility }: IProps) {
     const open = () => {
         setIsOpen(true);
         toggleHomeVisibility(true);
-        setScrollPosition(window.scrollY);
-        document.body.style.top = `-${window.scrollY}px`;
-        document.body.classList.add('hide-scroll');
+        // setScrollPosition(window.scrollY);
+        // document.body.style.top = `-${window.scrollY}px`;
+        // document.body.classList.add('hide-scroll');
     };
 
     const close = () => {
         setIsOpen(false);
         toggleHomeVisibility(false);
-        const scrollY = document.body.style.top;
-        document.body.classList.remove('hide-scroll');
-        document.body.style.removeProperty('top');
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+        // const scrollY = document.body.style.top;
+        // document.body.classList.remove('hide-scroll');
+        // document.body.style.removeProperty('top');
+        // window.scrollTo(0, parseInt(scrollY || '0') * -1);
     };
 
-    const handleKeyDown = (event: KeyboardEvent) => {
-        if (isOpen && (event.key === 'ArrowUp' || event.key === 'ArrowDown')) {
-            event.preventDefault();
-        }
-    };
 
-    const handleWheel = (event: WheelEvent) => {
-        if (isOpen) {
-            const linksElement = links.current;
-            if (linksElement && linksElement.contains(event.target as Node)) {
-                const { scrollTop, scrollHeight, clientHeight } = linksElement;
 
-                if (event.deltaY < 0 && scrollTop === 0) {
-                    event.preventDefault();
-                }
 
-                if (event.deltaY > 0 && scrollTop + clientHeight >= scrollHeight) {
-                    event.preventDefault();
-                }
-            } else {
-                event.preventDefault();
-            }
-        }
-    };
+    // const handleKeyDown = (event: KeyboardEvent) => {
+    //     if (isOpen && (event.key === 'ArrowUp' || event.key === 'ArrowDown')) {
+    //         event.preventDefault();
+    //     }
+    // };
 
-    useEffect(() => {
-        window.addEventListener('keydown', handleKeyDown);
-        window.addEventListener('wheel', handleWheel, { passive: false });
+    // const handleWheel = (event: WheelEvent) => {
+    //     if (isOpen) {
+    //         const linksElement = links.current;
+    //         if (linksElement && linksElement.contains(event.target as Node)) {
+    //             const { scrollTop, scrollHeight, clientHeight } = linksElement;
 
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-            window.removeEventListener('wheel', handleWheel);
-        };
-    }, [isOpen, links]);
+    //             if (event.deltaY < 0 && scrollTop === 0) {
+    //                 event.preventDefault();
+    //             }
+
+    //             if (event.deltaY > 0 && scrollTop + clientHeight >= scrollHeight) {
+    //                 event.preventDefault();
+    //             }
+    //         } else {
+    //             event.preventDefault();
+    //         }
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     window.addEventListener('keydown', handleKeyDown);
+    //     window.addEventListener('wheel', handleWheel, { passive: false });
+
+    //     return () => {
+    //         window.removeEventListener('keydown', handleKeyDown);
+    //         window.removeEventListener('wheel', handleWheel);
+    //     };
+    // }, [isOpen, links]);
 
     return (
         <>
@@ -96,14 +110,14 @@ export default function Nav({ toggleHomeVisibility }: IProps) {
                     <ul onClick={close} ref={links}>
                         {/* <li><Link to={`/sss`}>s</Link></li>
                         <li><Link to={`/`}>Hem</Link></li> */}
-                        {/* <li><Link to={`/`}>Hem</Link></li>
+                        <li><Link to={`/`}>Hem</Link></li>
                         <li><Link to={`/meny`}>Meny</Link></li>
                         <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakta oss</Link></li> */}
-                        <li><a href={`/`}>Hem</a></li>
+                        <li><Link to={`/kontakt`}>Kontakta oss</Link></li>
+                        {/* <li><a href={`/`}>Hem</a></li>
                         <li><a href={`/meny`}>Meny</a></li>
                         <li><a href={``}>Om oss</a></li>
-                        <li><a href={`/kontakt`}>Kontakta oss</a></li>
+                        <li><a href={`/kontakt`}>Kontakta oss</a></li> */}
                         {/* <li><Link to={`/`}>Hem</Link></li>
                         <li><Link to={`/pizzor`}>Meny</Link></li>
                         <li><Link to={`/sss`}>s</Link></li>
