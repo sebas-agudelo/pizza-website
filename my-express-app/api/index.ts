@@ -185,5 +185,20 @@ app.post('/logout', async (req: Request, res: Response) => {
     }
 });
 
+app.get('/getAllCategories', async (req: Request, res: Response) => {
+    try{
+        let {data: Categories, error} = await supabase
+        .from('Categories')
+        .select('*')
+
+
+        res.status(200).json(Categories);
+
+    } catch(error){
+        console.log(error);
+        
+    }
+});
+
 
 app.listen(3001, () => console.log("Server ready on port 3001."));
