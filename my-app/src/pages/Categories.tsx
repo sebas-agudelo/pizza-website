@@ -6,6 +6,7 @@ import { IoAddCircleOutline } from "react-icons/io5";
 import { IProducts } from '../module/products';
 
 export default function Categories() {
+    
     const [categories, setCategories] = useState<ICategories[]>([]);
     useEffect(() => {
         const fectFunction = async () => {

@@ -85,9 +85,6 @@ export default function Nav({ toggleHomeVisibility }: IProps) {
                     </div>
 
                     <ul>
-                        <li>
-                            <i className="fa-solid fa-magnifying-glass"></i>
-                        </li>
                         {/* <li>
                             <Link to={`/login`}><i className="fa-regular fa-user"></i></Link>
                         </li> */}
@@ -108,127 +105,11 @@ export default function Nav({ toggleHomeVisibility }: IProps) {
                 <div className={`links ${isOpen ? 'active' : ''}`}>
                     <div className='div'></div>
                     <ul onClick={close} ref={links}>
-                        {/* <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li> */}
                         <li><Link to={`/`}>Hem</Link></li>
                         <li><Link to={`/meny`}>Meny</Link></li>
                         <li><Link to={``}>Om oss</Link></li>
                         <li><Link to={`/kontakt`}>Kontakta oss</Link></li>
-                        {/* <li><a href={`/`}>Hem</a></li>
-                        <li><a href={`/meny`}>Meny</a></li>
-                        <li><a href={``}>Om oss</a></li>
-                        <li><a href={`/kontakt`}>Kontakta oss</a></li> */}
-                        {/* <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/kon`}>oss</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/kon`}>oss</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/pizzor`}>Meny</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/kontakt`}>Kontakt oss</Link></li>
-                        <li><Link to={`/kon`}>oss</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li>
-                        <li><Link to={`/sss`}>s</Link></li> */}
+                      
                     </ul>
                 </div>
 

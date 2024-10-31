@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <footer>
-      {/* <svg width="300" height="80">
+      <svg width="300" height="80">
         <defs>
           <path id="text-curve" d="M 50,108 A 75,50 0 1,1 250,100" />
         </defs>
-        <text font-size="40" font-family="Arial, sans-serif" fill='#ffd900'>
+        <text font-size="40" font-family="Arial, sans-serif" fill='#000000'>
           <textPath href="#text-curve" startOffset="50%" text-anchor="middle">
             Gusto Pizza
           </textPath>
         </text>
-      </svg> */}
+      </svg>
 
 
       <div className='app-actions-and-map'>
