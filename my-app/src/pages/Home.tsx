@@ -59,15 +59,15 @@ export default function Home({ className }: HomeProps) {
              
                     <article>
                         <div className='home-product-img'>
-                            <img src="/kebabpizza.png" alt="" />
+                            <img src="Pizza-Margarita-United-Pizza_600x600.png" alt="" />
                         </div>
-                        <span>Kebab Pizza</span>
+                        <span>Margherita Pizza</span>
                     </article>
                     <article>
                         <div className='home-product-img'>
-                            <img src="pizza-5275191_1920.jpg" alt="" />
+                            <img src="/kebabpizza.png" alt="" />
                         </div>
-                        <span>Margherita Pizza (Vegansk)</span>
+                        <span>Kebab Pizza</span>
                     </article>
                     <article>
                         <div className='home-product-img'>
@@ -75,6 +75,8 @@ export default function Home({ className }: HomeProps) {
                         </div>
                         <span>Timmo Pizza</span>
                     </article>
+
+                    {/* <Link className='app-meny-btn' to={`/meny`}>Se vår meny</Link> */}
                 
             </div>
             

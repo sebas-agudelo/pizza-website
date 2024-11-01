@@ -55,6 +55,7 @@ nav {
                     font-size: 2.5rem;
                     opacity: 1;
                     transition: opacity 150ms linear 150ms;
+                    color: #ffffff;
                 }
 
                 .mobile-menu-burger.hidden {
@@ -70,6 +71,8 @@ nav {
                     z-index: -1;
                     opacity: 0;
                     transition: opacity 150ms linear 150ms;
+                    color: #ffffff;
+
 
                 }
 
