@@ -12,7 +12,7 @@ export default function Home({ className }: HomeProps) {
     const [isFullyScrolled, setIsFullyScrolled] = useState(false);
 
     useEffect(() => {
-        const homeCategoriesWrapper = document.querySelector('.home-categories-wrapper');
+        const homeCategoriesWrapper = document.querySelector('.app-home-favarite-products-wrapper');
 
         if (homeCategoriesWrapper === null) {
             return;
@@ -52,36 +52,62 @@ export default function Home({ className }: HomeProps) {
                 <img src="/Hero2.jpg" alt="" className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`} />
             </div>
 
-            <h2 className={`h2-gusto-pizza ${className}`}>VÄLKOMMEN TILL GUSTO PIZZA</h2>
+            <h1 className={`h2-gusto-pizza ${className}`}>VÄLKOMMEN TILL GUSTO PIZZA</h1>
 
-            <div className={`home-categories-wrapper ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
+            <section className={`app-home-favarite-products-wrapper ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
                 <p>FAVORITER</p>
-             
+                <article className='app-home-favarite-products-content'>
                     <article>
                         <div className='home-product-img'>
                             <img src="Pizza-Margarita-United-Pizza_600x600.png" alt="" />
                         </div>
-                        <span>Margherita Pizza</span>
+                        <p>Margherita Pizza</p>
                     </article>
                     <article>
                         <div className='home-product-img'>
                             <img src="/kebabpizza.png" alt="" />
                         </div>
-                        <span>Kebab Pizza</span>
+                        <p>Kebab Pizza</p>
                     </article>
                     <article>
                         <div className='home-product-img'>
                             <img src="pizza-1344720_1920.jpg" alt="" />
                         </div>
-                        <span>Timmo Pizza</span>
+                        <p>Timmo Pizza</p>
                     </article>
+                </article>
 
-                    {/* <Link className='app-meny-btn' to={`/meny`}>Se vår meny</Link> */}
-                
-            </div>
-            
+            </section>
 
-            <div className={`short-bussiness-description ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
+            <section className='app-home-speceality-wrapper'>
+                <div className='speliality-img'>
+                    <img src="window.jpg" alt="" />
+                </div>
+
+
+                <h3>Authentic Flavors</h3>
+                <h2>GUSTO PIZZA</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis saepe facere, officiis, repellendus eligendi doloribus ipsam quia itaque exercitationem ratione sapiente incidunt fugiat rem et laborum dolorem rerum quod. Harum.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis eius ea eos alias eaque laboriosam at nostrum quis repellendus hic nam vero, quas cupiditate facilis in sunt sit. Eveniet, cumque?
+                    <br /> <br />
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam quia ratione facilis deleniti recusandae, corporis commodi magnam voluptates officiis nisi nihil, qui laboriosam assumenda! Quam nesciunt odit rem necessitatibus veritatis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eos, qui in, veniam deleniti reiciendis sit natus exercitationem eveniet vel officiis totam deserunt eaque! Consequuntur laboriosam aliquam doloremque saepe incidunt!
+
+                </p>
+
+                <div className='menu-btn'>
+                    <button>
+                        <Link to={`/meny`}>SE MENU</Link>
+                    </button>
+                </div>
+
+
+            </section>
+
+
+            {/* <div className={`short-bussiness-description ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
                 <h2>SVERIGES BÄSTA GUSTO PIZZA</h2>
 
                 <p>Välkommen till Sveriges bästa Gusto Pizza – där passion för hantverkspizza och kvalitetsingredienser möts för att skapa en smakupplevelse utöver det vanliga. På Gusto Pizza serverar vi allt från klassiska favoriter till innovativa smakkombinationer, alltid tillagade med färska, noggrant utvalda råvaror. Våra pizzor bakas i stenugn för den perfekta, krispiga botten och toppas med omsorg för att lyfta fram varje smaknyans.
@@ -105,7 +131,7 @@ export default function Home({ className }: HomeProps) {
 
 
 
-            <Footer />
+            <Footer /> */}
         </div>
     );
 }
