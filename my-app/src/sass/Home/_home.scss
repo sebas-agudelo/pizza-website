@@ -31,13 +31,13 @@
     
         .h2-gusto-pizza{
             position: absolute;
-            top: 49.7%;
+            top: 35%;
             color: #ffffff;
 
             width: 100%;
             max-width: 270px;
             left: 50%;
-            transform: translate(-50%, -49.7%);
+            transform: translate(-50%, -35%);
         }
 
         .h2-gusto-pizza-1{
@@ -55,20 +55,24 @@
             height: 50vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            // background-color: #000000;
+            align-items: center;
             
             // position: absolute;
-            // top: 91%;
+            // top: 80%;
             // left: 50%;
-            // transform: translate(-50%, -91%);
+            // transform: translate(-50%, -80%);
+
+            p{
+                padding: 0 4rem;
+                margin-top: 3rem;
+            }
             button{
-                padding: 1rem;
+                padding: 1rem 2rem;
                 border-radius: 2rem;
                 background-color: #ff7b00d2;
                 border: none;
-                margin: 0.3rem 0;
+                margin: 0.8rem 0;
 
                 a{
                     color: #ffffff;
