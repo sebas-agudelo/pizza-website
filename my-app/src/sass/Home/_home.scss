@@ -2,12 +2,12 @@
 .home {
 
     width: 100%;
-    height: 100dvh;
+    height: calc(100vh - 90px);
 
     .hero-section{
         position: relative;
         width: 100%;
-        height: 100dvh;
+        height: 100vh;
         text-align: center;
 
         .hero-img {
