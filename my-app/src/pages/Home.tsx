@@ -50,8 +50,8 @@ export default function Home({ className }: HomeProps) {
 
             <div className='hero-section'>
                 <div className='hero-img'>
-                    {/* <video src="pizza-video3.mp4" autoPlay loop muted></video> */}
-                    <img src="/Hero2.jpg" alt="" className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`} />
+                    <video src="ppp.mp4" autoPlay loop muted></video>
+                    {/* <img src="/Hero2.jpg" alt="" className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`} /> */}
                 </div>
 
                 <h1 className={`h2-gusto-pizza ${className}`}>WELCOME TO GUSTO PIZZA</h1>
