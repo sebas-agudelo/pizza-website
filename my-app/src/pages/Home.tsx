@@ -48,14 +48,26 @@ export default function Home({ className }: HomeProps) {
     return (
         <div className='home'>
 
-            <div className='hero-img'>
-                <img src="/Hero2.jpg" alt="" className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`} />
+            <div className='hero-section'>
+                <div className='hero-img'>
+                    {/* <video src="pizza-video3.mp4" autoPlay loop muted></video> */}
+                    <img src="/Hero2.jpg" alt="" className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`} />
+                </div>
+
+                <h1 className={`h2-gusto-pizza ${className}`}>WELCOME TO GUSTO PIZZA</h1>
+
+                <div className='hero-order-btns'>
+                    <button>
+                        <Link to={`/`}>PICKUP</Link>
+                    </button>
+                    <button>
+                        <Link to={`/`}>DELIVERY</Link>
+                    </button>
+                </div>
             </div>
 
-            <h1 className={`h2-gusto-pizza ${className}`}>VÄLKOMMEN TILL GUSTO PIZZA</h1>
-
             <section className={`app-home-favarite-products-wrapper ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
-                <p>FAVORITER</p>
+                <p>FAVORITES</p>
                 <article className='app-home-favarite-products-content'>
                     <article>
                         <div className='home-product-img'>
@@ -79,8 +91,8 @@ export default function Home({ className }: HomeProps) {
 
             </section>
 
-            <section className='app-home-speceality-wrapper'>
-                <div className='speliality-img'>
+            <section className='app-home-speciality-wrapper'>
+                <div className='speciality-img'>
                     <img src="window.jpg" alt="" />
                 </div>
 
@@ -97,41 +109,63 @@ export default function Home({ className }: HomeProps) {
 
                 </p>
 
+            </section>
+
+            <section className='app-more-pizzas-wrapper'>
+                {/* <h2>MORE PIZZAS</h2> */}
+                <h3>MORE DELICIOUS</h3>
+                <section className='app-more-pizzas-content'>
+                    <article>
+                        <div className='more-product-img'>
+                            <img src="Pizza-Margarita-United-Pizza_600x600.png" alt="" />
+                        </div>
+                        <p>Margherita Pizza</p>
+                    </article>
+                    {/* <article>
+                        <div className='more-product-img'>
+                            <img src="/kebabpizza.png" alt="" />
+                        </div>
+                        <p>Kebab Pizza</p>
+                    </article>
+                    <article>
+                        <div className='more-product-img'>
+                            <img src="pizza-1344720_1920.jpg" alt="" />
+                        </div>
+                        <p>Timmo Pizza</p>
+                    </article> */}
+                </section>
+
                 <div className='menu-btn'>
                     <button>
                         <Link to={`/meny`}>SE MENU</Link>
                     </button>
                 </div>
 
+            </section>
+
+            <section className='app-pickup-wrapper'>
+                <h3>ORDER FOR PICKUP OR DELIVERY</h3>
+                <div className='pickup-img-1'>
+                    <img src="pickup8.jpg" alt="" />
+                </div>
+
+                <div>
+                    <p>
+                        PICKUP YOUR PIZZA SELF IN ONLY 10 MINUTES
+                    </p>
+                </div>
+
+
+                <div>
+                    <button><Link to={``}>Pickup</Link></button>
+                    <button><Link to={``}>Delivery</Link></button>
+                </div>
 
             </section>
 
 
-            {/* <div className={`short-bussiness-description ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
-                <h2>SVERIGES BÄSTA GUSTO PIZZA</h2>
 
-                <p>Välkommen till Sveriges bästa Gusto Pizza – där passion för hantverkspizza och kvalitetsingredienser möts för att skapa en smakupplevelse utöver det vanliga. På Gusto Pizza serverar vi allt från klassiska favoriter till innovativa smakkombinationer, alltid tillagade med färska, noggrant utvalda råvaror. Våra pizzor bakas i stenugn för den perfekta, krispiga botten och toppas med omsorg för att lyfta fram varje smaknyans.
-                    <br /><br />
-                    Oavsett om du är sugen på en traditionell Margherita eller vill utforska nya spännande smakäventyr, har Gusto Pizza något för alla. Vi erbjuder dessutom veganska och vegetariska alternativ som får dig att vilja komma tillbaka igen och igen. Besök oss för en äkta pizzaupplevelse där kvalitet, smak och service står i fokus – för en pizza som är lite bättre, lite godare och helt enkelt Gusto!
-
-                </p>
-
-                <a href={`/meny`}>Vår meny</a>
-            </div>
-
-            <div className='app-media-wrapper'>
-                
-                <div className='app-img-wrapper'>
-
-                    <div className='app-img'>
-                        <img src="street-6099209_1920.jpg" alt="" />
-                    </div>
-                </div>
-            </div>
-
-
-
-            <Footer /> */}
+            {/* <Footer /> */}
         </div>
     );
 }

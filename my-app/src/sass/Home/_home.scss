@@ -1,45 +1,75 @@
 //MOBILE SCSS
 .home {
-    position: relative;
+
     width: 100%;
     height: 100dvh;
 
-    .hero-img {
+    .hero-section{
+        position: relative;
         width: 100%;
         height: 100vh;
+        text-align: center;
 
-        img {
+        .hero-img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 43%;
-            border-bottom-right-radius: 0rem;
-            ;
-            transition: border-bottom-right-radius 0.6s linear;
+            height: 70vh;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 43%;
+                border-bottom-right-radius: 0rem;
+                ;
+                transition: border-bottom-right-radius 0.6s linear;
+            }
+    
+            img.visible {
+                border-bottom-right-radius: 10rem;
+            }
+        }
+    
+    
+        .h2-gusto-pizza {
+            position: absolute;
+            top: 73%;
+            color: #ff8000;
+            font-size: 3.3rem;
+            width: 50%;
+            max-width: 270px;
+            left: 50%;
+            transform: translate(-50%, -73%);
         }
 
-        img.visible {
-            border-bottom-right-radius: 10rem;
+        .hero-order-btns{
+            display: flex;
+            flex-direction: column;
+            
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%, -95%);
+            button{
+                padding: 1rem;
+                border-radius: 2rem;
+                background-color: #ff7b00d2;
+                border: none;
+                margin: 0.9rem 0;
+
+                a{
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+            }
         }
     }
 
-    .h2-gusto-pizza {
-        position: absolute;
-        top: 50%;
-        color: #f6ff00;
-        font-size: 3.3rem;
-        width: 75%;
-        max-width: 270px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 
     .app-home-favarite-products-wrapper {
         width: 100%;
         height: auto;
         text-align: center;
         margin: 0.1rem 0;
-        padding: 2rem 0 3rem;
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 0.6s linear, transform 0.6s linear;
@@ -57,8 +87,8 @@
                 width: 100%;
 
                 .home-product-img {
-                    width: 140px;
-                    height: 140px;
+                    width: 160px;
+                    height: 160px;
                     margin: auto;
 
                     img {
@@ -84,65 +114,12 @@
         transform: translateY(0);
     }
 
-    .short-bussiness-description {
-        width: 100%;
-
-        background-color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        h2 {
-            text-align: center;
-            font-size: 1.7rem;
-        }
-
-        p {
-            font-size: 1.3rem;
-            padding: 2rem 0;
-            color: #000000b0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000000b0;
-            font-size: 1.2rem;
-            border-bottom: 1px solid #000000b0;
-            padding: 0 0 0.3rem;
-
-        }
-    }
-
-    .app-media-wrapper {
-        padding-bottom: 1rem;
-        width: 100%;
-        height: auto;
-        // background-color: #ffffff;
-
-        .app-img-wrapper {
-            // padding-left: 1rem;
-            // padding-right: 1rem;
-
-            .app-img {
-                width: 100%;
-                height: 38vh;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: 30%;
-                }
-            }
-        }
-    }
-
-    .app-home-speceality-wrapper{
+    .app-home-speciality-wrapper{
         width: 100%;
         height: auto;
         background-color: #ff7b00d2;
         
-        .speliality-img{
+        .speciality-img{
             width: 100%;
             height: 30vh;
 
@@ -153,7 +130,7 @@
             } 
         }
 
-        h3, h2, p, .menu-btn{
+        h3, h2, p{
             padding: 0 3rem;
             text-align: center;
         }
@@ -164,11 +141,71 @@
             font-style: normal;
             font-size: 1.3rem;
         }
+    }
 
-        button{
-            
-            a{
-                
+    .app-more-pizzas-wrapper{
+        // background-color: #000000;
+        background-color: #ff7b00d2;
+        
+        width: 100%;
+        height: auto;
+
+        h2, h3, .menu-btn{
+            text-align: center;
+        }
+
+        h2{
+
+        }
+
+        h3{
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.3rem;
+        }
+
+        .app-more-pizzas-content{
+
+
+            article{
+
+                .more-product-img{
+                    width: 160px;
+                    height: 160px;
+                    margin: auto;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        object-position: 0%;
+                        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .app-pickup-wrapper{
+        width: 100%;
+        height: auto;
+        background-color: #000000;
+        background-image: url('../../../public/bg-img-more.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .pickup-img-1{
+            width: 100%;
+            height: 25vh;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0% 80%;
             }
         }
     }
