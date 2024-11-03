@@ -32,13 +32,13 @@
     
         .h2-gusto-pizza {
             position: absolute;
-            top: 73%;
+            top: 40%;
             color: #ff8000;
             font-size: 3.3rem;
             width: 100%;
             max-width: 270px;
             left: 50%;
-            transform: translate(-50%, -73%);
+            transform: translate(-50%, -40%);
         }
 
         .hero-order-btns{
@@ -46,9 +46,9 @@
             flex-direction: column;
             
             position: absolute;
-            top: 100%;
+            top: 65%;
             left: 50%;
-            transform: translate(-50%, -100%);
+            transform: translate(-50%, -65%);
             button{
                 padding: 1rem;
                 border-radius: 2rem;
