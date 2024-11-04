@@ -56,13 +56,13 @@ export default function Home({ className }: HomeProps) {
 
                 <div className='hero-order-btns'>
                     <button>
-                        <Link to={`/`}>PICKUP</Link>
+                        <Link to={`/`}>SE ALL MENU</Link>
                     </button>
-                    <button>
+                    {/* <button>
                         <Link to={`/`}>DELIVERY</Link>
-                    </button>
+                    </button> */}
                 </div>
-                
+
                 <div className='hero-img'>
                     <video src="ppp.mp4" autoPlay loop muted className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`}></video>
                     {/* <img src="/Hero2.jpg" alt="" className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`} /> */}
