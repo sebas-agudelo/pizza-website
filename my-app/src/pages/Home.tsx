@@ -145,7 +145,7 @@ export default function Home({ className }: HomeProps) {
 
             </section>
 
-            <section className='app-pickup-wrapper'>
+            {/* <section className='app-pickup-wrapper'>
                 <h3>ORDER FOR PICKUP OR DELIVERY</h3>
                 <div className='pickup-img-1'>
                     <img src="pickup8.jpg" alt="" />
@@ -163,7 +163,7 @@ export default function Home({ className }: HomeProps) {
                     <button><Link to={``}>Delivery</Link></button>
                 </div>
 
-            </section>
+            </section> */}
 
 
 
