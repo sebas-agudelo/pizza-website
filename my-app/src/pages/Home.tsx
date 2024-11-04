@@ -49,16 +49,10 @@ export default function Home({ className }: HomeProps) {
         <div className='home'>
 
             <div className='hero-section'>
-                <div className='hero-img'>
-                    <video src="ppp.mp4" autoPlay loop muted className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`}></video>
-                    {/* <img src="/Hero2.jpg" alt="" className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`} /> */}
-                </div>
                 <div className='h2-gusto-pizza'>
-                <h1 className={`h2-gusto-pizza-1 ${className}`}>WELCOME TO</h1>
-                <h1 className={`h2-gusto-pizza-2 ${className}`}>GUSTO PIZZA</h1>
+                    <h1 className={`h2-gusto-pizza-1 ${className}`}>WELCOME TO</h1>
+                    <h1 className={`h2-gusto-pizza-2 ${className}`}>GUSTO PIZZA</h1>
                 </div>
-
-
 
                 <div className='hero-order-btns'>
                     <button>
@@ -67,7 +61,11 @@ export default function Home({ className }: HomeProps) {
                     <button>
                         <Link to={`/`}>DELIVERY</Link>
                     </button>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nesciunt quas totam sssssssssssssssssssssssssssssssss</p>
+                </div>
+                
+                <div className='hero-img'>
+                    <video src="ppp.mp4" autoPlay loop muted className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`}></video>
+                    {/* <img src="/Hero2.jpg" alt="" className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`} /> */}
                 </div>
             </div>
 
