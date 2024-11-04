@@ -50,6 +50,11 @@ export default function Home({ className }: HomeProps) {
 
             <div className='hero-section'>
 
+                <div className='hero-img'>
+                    <video src="ppp.mp4" autoPlay loop muted className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`}></video>
+
+                </div>
+
                 <div className='h2-gusto-pizza'>
                     <h1 className={`h2-gusto-pizza-1 ${className}`}>WELCOME TO</h1>
                     <h1 className={`h2-gusto-pizza-2 ${className}`}>GUSTO PIZZA</h1>
@@ -61,10 +66,6 @@ export default function Home({ className }: HomeProps) {
                     </button>
                 </div>
 
-                <div className='hero-img'>
-                    <video src="ppp.mp4" autoPlay loop muted className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`}></video>
-                    {/* <img src="/Hero2.jpg" alt="" className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`} /> */}
-                </div>
             </div>
 
             <section className={`app-home-favarite-products-wrapper ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>

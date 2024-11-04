@@ -9,15 +9,10 @@
         width: 100%;
         height: 100vh;
         text-align: center;
-        // background-color: #fbff00;
-        background-image: url('../../../public/bg-img-more.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-
 
         .hero-img {
             width: 100%;
-            height: 60vh;
+            height: 100vh;
     
             video {
                 width: 100%;
@@ -26,7 +21,6 @@
                 object-position: 0%;
                 border-bottom-right-radius: 0rem;
                 transition: border-bottom-right-radius 0.6s linear;
-                border-radius: 2.5rem 2.5rem 0 0;
             }
     
             // video.visible {
@@ -37,13 +31,13 @@
     
         .h2-gusto-pizza{
             position: absolute;
-            top: 38%;
+            top: 40%;
             color: #ffffff;
 
             width: 100%;
             max-width: 270px;
             left: 50%;
-            transform: translate(-50%, -38%);
+            transform: translate(-50%, -40%);
         }
 
         .h2-gusto-pizza-1{
@@ -58,16 +52,10 @@
         }
 
         .hero-order-btns{
-            height: 40vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-            // position: absolute;
-            // top: 80%;
-            // left: 50%;
-            // transform: translate(-50%, -80%);
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
 
             p{
                 padding: 0 4rem;
