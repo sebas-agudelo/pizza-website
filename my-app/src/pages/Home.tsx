@@ -145,25 +145,25 @@ export default function Home({ className }: HomeProps) {
 
             </section>
 
-            {/* <section className='app-pickup-wrapper'>
+            <section className='app-pickup-wrapper'>
+                <h3>Do you want a pizza?</h3>
                 <h3>ORDER FOR PICKUP OR DELIVERY</h3>
-                <div className='pickup-img-1'>
-                    <img src="pickup8.jpg" alt="" />
-                </div>
 
-                <div>
-                    <p>
-                        PICKUP YOUR PIZZA SELF IN ONLY 10 MINUTES
-                    </p>
-                </div>
+                <p>
+                    Come to our restaurant in Los Angeles and pick up your pizza yourself in just 10 minutes or order a delicious pizza for delivery. 
+                    <br />
+                </p>
 
+                {/* <div className='pickup-img-1'>
+                    <img src="pickup.jpg" alt="" />
+                </div> */}
 
-                <div>
+                <div className='btns'>
                     <button><Link to={``}>Pickup</Link></button>
                     <button><Link to={``}>Delivery</Link></button>
                 </div>
 
-            </section> */}
+            </section>
 
 
 
