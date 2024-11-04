@@ -80,9 +80,9 @@ export default function Nav({ toggleHomeVisibility }: IProps) {
         <>
             <nav>
                 <div className='logo-and-user-wrapper'>
-                    {/* <div className='logo'>
-                        <img src="/LOGO.png" alt="Logo" />
-                    </div> */}
+                    <div className='logo'>
+                        <img src="/GUSTO(1).png" alt="Logo" />
+                    </div>
 
                     <ul>
                         {/* <li>
