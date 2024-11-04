@@ -49,6 +49,7 @@ export default function Home({ className }: HomeProps) {
         <div className='home'>
 
             <div className='hero-section'>
+
                 <div className='h2-gusto-pizza'>
                     <h1 className={`h2-gusto-pizza-1 ${className}`}>WELCOME TO</h1>
                     <h1 className={`h2-gusto-pizza-2 ${className}`}>GUSTO PIZZA</h1>
@@ -56,11 +57,8 @@ export default function Home({ className }: HomeProps) {
 
                 <div className='hero-order-btns'>
                     <button>
-                        <Link to={`/`}>SE ALL MENU</Link>
+                        <Link to={`/meny`}>SE ALL MENU</Link>
                     </button>
-                    {/* <button>
-                        <Link to={`/`}>DELIVERY</Link>
-                    </button> */}
                 </div>
 
                 <div className='hero-img'>
