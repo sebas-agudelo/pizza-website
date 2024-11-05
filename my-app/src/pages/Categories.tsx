@@ -41,7 +41,7 @@ export default function Categories() {
                 {categories.map((category, index) => (
                     <section className='app-category-products-wrapper' key={index}>
 
-                        <span>{category.category_name}</span>
+                        <h2 className='category-header'>{category.category_name}</h2>
 
                         <section className='app-products-wrapper'>
                             {category.products.map((product, index) => (
@@ -51,8 +51,8 @@ export default function Categories() {
                                             <img src={product.product_img} alt="" />
                                         </div>
                                         <div className='app-product-info'>
-                                        <h3 className='name'>{product.product_name}</h3>
-                                            <p className='price'>{product.product_price}kr</p>
+                                        <h3 className='product-name'>{product.product_name}</h3>
+                                            <p className='product-price'>{product.product_price}kr</p>
                                             <IoAddCircleOutline />
                                         </div>
                                     </article>
