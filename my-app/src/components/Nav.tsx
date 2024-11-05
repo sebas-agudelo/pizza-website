@@ -106,7 +106,7 @@ export default function Nav({ toggleHomeVisibility }: IProps) {
                     <div className='div'></div>
                     <ul onClick={close} ref={links}>
                         <li><Link to={`/`}>Hem</Link></li>
-                        <li><Link to={`/meny`}>Meny</Link></li>
+                        <li><Link to={`/menu`}>Menu</Link></li>
                         <li><Link to={``}>Om oss</Link></li>
                         <li><Link to={`#contact`}>Kontakta oss</Link></li>
                       

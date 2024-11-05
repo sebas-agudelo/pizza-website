@@ -36,7 +36,7 @@ function App() {
                     <Route path='/adminlogin' element={<Signin />}/>
                     <Route path='/adminpanel' element={<AdminPanel />}/>
                     <Route path='/nyprodukt' element={<AddProduct />}/>
-                    <Route path='/meny' element={<Categories />}/>
+                    <Route path='/menu' element={<Categories />}/>
 
                     {/* ALLT OM USER */}
                     {/* <Route path='/login' element={<UserSignin />}/> */}

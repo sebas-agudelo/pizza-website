@@ -62,7 +62,7 @@ export default function Home({ className }: HomeProps) {
 
                 <div className='hero-order-btns'>
                     <button>
-                        <Link to={`/meny`}>SE ALL MENU</Link>
+                        <Link to={`/menu`}>SE ALL MENU</Link>
                     </button>
                 </div>
 
@@ -153,8 +153,8 @@ export default function Home({ className }: HomeProps) {
                     <h3>We are locoted in Madrid, Gran Via</h3>
 
                     <div className='btns'>
-                        <button><Link to={``}>SE MENU</Link></button>
-                        <button><Link to={``}>CALL US</Link></button>
+                        <button><Link to={`/menu`}>SE MENU</Link></button>
+                        <button><Link to={`tel:0700000000`}>CALL US</Link></button>
                     </div>
 
                 </section>
