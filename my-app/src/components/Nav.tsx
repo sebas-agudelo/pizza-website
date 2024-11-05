@@ -105,10 +105,10 @@ export default function Nav({ toggleHomeVisibility }: IProps) {
                 <div className={`links ${isOpen ? 'active' : ''}`}>
                     <div className='div'></div>
                     <ul onClick={close} ref={links}>
-                        <li><Link to={`/`}>Hem</Link></li>
+                        <li><Link to={`/`}>Home</Link></li>
                         <li><Link to={`/menu`}>Menu</Link></li>
-                        <li><Link to={``}>Om oss</Link></li>
-                        <li><Link to={`#contact`}>Kontakta oss</Link></li>
+                        <li><Link to={``}>About</Link></li>
+                        <li><Link to={`#contact`}>Contact</Link></li>
                       
                     </ul>
                 </div>

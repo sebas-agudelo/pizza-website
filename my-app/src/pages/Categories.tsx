@@ -23,17 +23,18 @@ export default function Categories() {
     return (
         <section className='app-category-section'>
 
-            {/* <section className='hero'>
+            <section className='hero'>
                 <div className='category-img-wrapper'>
                     <img src="pexels-unkdevil-19130144.jpg" alt="" />
+                    {/* <video src="ppp.mp4" autoPlay loop muted></video> */}
                 </div>
 
-                <div className='div'>
+                {/* <div className='div'>
                     <h2>VÅR MENY</h2>
                     <p>Upptäck en värld av smaker hos oss på GUSTO PIZZA. Här hittar du ett brett urval av pizzor tillagade med färska råvaror och en passion för hantverket. Oavsett om du är sugen på en klassisk Margherita, en smakrik Capricciosa eller en egenkomponerad favorit, så har vi något för dig. Välkommen att utforska vår meny och låt oss ta dig på en smakresa du sent kommer glömma!</p>
-                </div>
+                </div> */}
 
-            </section> */}
+            </section>
 
 
             <section className='app-category-wrapper'>
