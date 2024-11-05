@@ -148,14 +148,9 @@ export default function Home({ className }: HomeProps) {
             <section className='app-pickup-wrapper'>
 
                 <section className='app-pickup-content'>
-                    <h2>OUR RESTAURANT</h2>
+                    <h2>ORDER EASILY ONLINE</h2>
 
                     <h3>We are locoted in Madrid, Gran Via</h3>
-
-                    <p>
-                        Order easily online
-                    </p>
-
 
                     <div className='btns'>
                         <button><Link to={``}>SE MENU</Link></button>
@@ -164,9 +159,9 @@ export default function Home({ className }: HomeProps) {
 
                 </section>
 
-                <div className='pickup-img-1'>
+                {/* <div className='pickup-img-1'>
                     <img src="pexels-antonina-blakytna-486639748-17476654.jpg" alt="" />
-                </div>
+                </div> */}
                 {/* <div className='pickup-img-1'>
                     <img src="pexels-unkdevil-19130144.jpg" alt="" />
                 </div> */}

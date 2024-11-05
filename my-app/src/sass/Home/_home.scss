@@ -37,6 +37,7 @@ $paddingBottom: 2rem;
             position: absolute;
             top: 40%;
             color: #ffffff;
+      
 
             width: 100%;
             max-width: 270px;
@@ -45,14 +46,14 @@ $paddingBottom: 2rem;
         }
 
         .h2-gusto-pizza-1{
-            font-size: 3.3rem;
+            font-size: 2.9rem;
             
             color: #ffd82b;
         }
 
         .h2-gusto-pizza-2{
             color: #ffffff;
-            font-size: 3.3rem;
+            font-size: 2.5rem;
         }
 
         .hero-order-btns{
@@ -252,18 +253,31 @@ $paddingBottom: 2rem;
         width: 100%;
         height: auto;
         text-align: center;
-        padding-bottom: $paddingBottom;
+        // padding-bottom: $paddingBottom;
 
         .app-pickup-content{
-            padding: $spaceBetwenSections;
-    
-   
-        h2, h3, p, .btns{
+            // padding: $spaceBetwenSections;
+            
+            
+            h2, h3, p, .btns{
+            // padding: 0 5rem;
 
+            padding: 1rem 7rem;
+        }
+
+        h2{
+            font-size: 2.5rem;
+            color: #ffd82b;
+        }
+
+        h3{
+            font-size: 1.6rem;
+            color: #222222;
+         
         }
         
         p{
-
+            font-size: 1.5rem;
         }
 
         .btns{
@@ -277,7 +291,7 @@ $paddingBottom: 2rem;
                 padding: 0.9rem;
                 border-radius: 1.5rem;
                 border: none;
-                margin-top: 1rem;
+                margin-bottom: 1rem;
                 width: 110px;
                 
                 a{
