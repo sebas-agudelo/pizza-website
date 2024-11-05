@@ -107,7 +107,7 @@ export default function Home({ className }: HomeProps) {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis eius ea eos alias eaque laboriosam at nostrum quis repellendus hic nam vero, quas cupiditate facilis in sunt sit. Eveniet, cumque?
                     <br /> <br />
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam quia ratione facilis deleniti recusandae, corporis commodi magnam voluptates officiis nisi nihil, qui laboriosam assumenda! Quam nesciunt odit rem necessitatibus veritatis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eos, qui in
+            
 
                 </p>
 
@@ -145,7 +145,18 @@ export default function Home({ className }: HomeProps) {
 
             </section>
 
-          
+            <section className='app-pickup-wrapper'>
+              
+                <div className='pickup-img-1'>
+                    <img src="pexels-rachel-claire-5865147.jpg" alt="" />
+                </div>
+
+                <div className='btns'>
+                    <button><Link to={``}>Pickup</Link></button>
+                    <button><Link to={``}>Delivery</Link></button>
+                </div>
+
+            </section>
 
 
 
