@@ -51,9 +51,14 @@ export default function Categories() {
                                             <img src={product.product_img} alt="" />
                                         </div>
                                         <div className='app-product-info'>
-                                        <h3 className='product-name'>{product.product_name}</h3>
+                                            <h3 className='product-name'>{product.product_name}</h3>
                                             <p className='product-price'>{product.product_price}kr</p>
-                                            <IoAddCircleOutline />
+                                            {/* <IoAddCircleOutline /> */}
+                                            <div className='buy-btn'>
+                                                <button>
+                                                    <Link to={``}>Buy</Link>
+                                                </button>
+                                            </div>
                                         </div>
                                     </article>
                                 </article>
