@@ -25,9 +25,10 @@ export default function Categories() {
 
             <section className='hero'>
                 <div className='category-img-wrapper'>
-                    <img src="pexels-muffin-1653877.jpg" alt="" />
+                    <img src="pexels-roman-odintsov-5903171.jpg" alt="" />
                 </div>
 
+                <h2 className='our-menu'>OUR MENU</h2>
 
 
             </section>
@@ -48,14 +49,16 @@ export default function Categories() {
                                             <img src={product.product_img} alt="" />
                                         </div>
                                         <div className='app-product-info'>
+
                                             <h3 className='product-name'>{product.product_name}</h3>
                                             <p className='product-price'>{product.product_price}kr</p>
-                                            {/* <IoAddCircleOutline /> */}
+                                     
                                             <div className='buy-btn'>
                                                 <button>
                                                     <Link to={``}>Buy</Link>
                                                 </button>
                                             </div>
+
                                         </div>
                                     </article>
                                 </article>
