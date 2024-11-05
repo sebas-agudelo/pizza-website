@@ -25,7 +25,7 @@ export default function Categories() {
 
             <section className='hero'>
                 <div className='category-img-wrapper'>
-                    <img src="GUSTO (1).png" alt="" />
+                    <img src="pexels-muffin-1653877.jpg" alt="" />
                 </div>
 
 
