@@ -1,189 +1,60 @@
 .app-category-section {
-    height: 100dvh;
     width: 100%;
+    height: 100vh;
 
-    .hero {
-        // position: relative;
-        width: 100%;
-        height: calc(100vh - 90px);
+    padding-top: 70px;
 
-
-        .category-img-wrapper {
-            width: 100%;
-            height: 55vh;
-
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: 50%;
-            }
-        }
-
-        .div {
-
-            padding: 2rem 1.5rem 0;
-
-            h2 {
-                font-size: 2rem;
-                text-align: center;
-                padding: 2rem 0;
-            }
-
-
-            p {}
-        }
-
-
-    }
-
-    .app-category-content-wrapper {
+    .app-category-wrapper {
         width: 100%;
         height: auto;
 
-        article {
-            width: 100%;
-            height: 100%;
-            padding: 0.5rem 1.3rem;
-            margin: 1rem 0 0 0;
-            // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-            border-radius: 0.5rem;
+
+        .app-category-products-wrapper {
             text-align: center;
-            
-            span {
-                font-size: 1.8rem;
-                color: #2b1d1d;
-            }
-            
-        }
-        
-        .app-products-wrapper {
-            .app-products-info-wrapper {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
 
-                span {
-                    font-size: 1.4rem;
-                }
 
-                .app-product-info {
-                    display: flex;
-                    flex-direction: column;
+            .app-products-wrapper {
 
-                    span {
-                        margin: 0.3rem 0;
+                .app-products-content {
+                    padding: 0 3rem;
 
-                        svg {
-                            font-size: 1.9rem;
+
+                    .app-product {
+                        width: 100%;
+                        text-align: center;
+                        border: 1px solid #dfdfdf;
+                        border-radius: 1.5rem;
+                        // padding: 2rem 0;
+
+                        .app-product-img {
+                            width: 120px;
+                            height: 120px;
+                            margin: auto;
+                          
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                object-position: 0%;
+                                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+                            
+                            }
+
+                        }
+
+                        .app-product-info {
+
+                            p, span{
+                                padding-top: 0.7rem;
+
+                            }
                         }
                     }
-
                 }
             }
 
-            // .del-icon{
-            //     display: none;
-            // }
-
-            // .del-icon.product-del-icon{
-            //     display: block;
-            // }
         }
     }
-}
-
-//DESKTOP SCSS
-@media screen and (min-width: 768px) {
-    .app-category-section {
-        height: 100dvh;
-        width: 100%;
-
-        .hero {
-            // position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            
-    
-    
-            .category-img-wrapper {
-                width: 50%;
-                height: 100vh;
-    
-    
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: 50%;
-                }
-            }
-            .div {
-                width: 50%;
-                padding: 2rem 5rem 0;
-                margin-top: 8rem;
-    
-                h2 {
-                    font-size: 2rem;
-                    text-align: center;
-                    padding: 2rem 0;
-                }
-    
-    
-                p {
-                    font-size: 1.3rem;
-                }
-            }
-
-    }
-
-    .app-category-content-wrapper {
-        width: 100%;
-        height: auto;
-
-        article {
-            width: 100%;
-            height: 100%;
-            padding: 0.5rem 10rem;
-            margin: 1rem 0 0 0;
-            // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-            border-radius: 0.5rem;
-            text-align: center;
-            
-            span {
-                font-size: 1.8rem;
-                color: #2b1d1d;
-            }
-            
-        }
-        
-        .app-products-wrapper {
-            .app-products-info-wrapper {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                span {
-                    font-size: 1.4rem;
-                }
-
-                .app-product-info {
-                    display: flex;
-                    flex-direction: column;
-
-                    span {
-                        margin: 0.3rem 0;
-
-                        svg {
-                            font-size: 1.9rem;
-                        }
-                    }
-
-                }
-            }
-        }
-    }
-}
 }

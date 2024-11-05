@@ -6,7 +6,7 @@ import { IoAddCircleOutline } from "react-icons/io5";
 import { IProducts } from '../module/products';
 
 export default function Categories() {
-    
+
     const [categories, setCategories] = useState<ICategories[]>([]);
     useEffect(() => {
         const fectFunction = async () => {
@@ -23,9 +23,9 @@ export default function Categories() {
     return (
         <section className='app-category-section'>
 
-            <section className='hero'>
+            {/* <section className='hero'>
                 <div className='category-img-wrapper'>
-                    <img src="pexels-vanmalidate-784636.jpg" alt="" />
+                    <img src="pexels-unkdevil-19130144.jpg" alt="" />
                 </div>
 
                 <div className='div'>
@@ -33,34 +33,39 @@ export default function Categories() {
                     <p>Upptäck en värld av smaker hos oss på GUSTO PIZZA. Här hittar du ett brett urval av pizzor tillagade med färska råvaror och en passion för hantverket. Oavsett om du är sugen på en klassisk Margherita, en smakrik Capricciosa eller en egenkomponerad favorit, så har vi något för dig. Välkommen att utforska vår meny och låt oss ta dig på en smakresa du sent kommer glömma!</p>
                 </div>
 
-            </section>
+            </section> */}
 
 
-            <section className='app-category-content-wrapper'>
+            <section className='app-category-wrapper'>
 
                 {categories.map((category, index) => (
-                    <article key={index}>
+                    <section className='app-category-products-wrapper' key={index}>
 
                         <span>{category.category_name}</span>
 
                         <section className='app-products-wrapper'>
                             {category.products.map((product, index) => (
-                                <article className='app-products-info-wrapper' key={index}>
-                                    <span>{product.product_name}</span>
-                                    <div className='app-product-info'>
-                                        <span>{product.product_price}kr</span>
-                                        <span><IoAddCircleOutline /></span>
-                                    </div>
+                                <article className='app-products-content' key={index}>
+                                    <article className='app-product'>
+                                        <div className='app-product-img'>
+                                            <img src={product.product_img} alt="" />
+                                        </div>
+                                        <div className='app-product-info'>
+                                        <p>{product.product_name}</p>
+                                            <p>{product.product_price}kr</p>
+                                            <p><IoAddCircleOutline /></p>
+                                        </div>
+                                    </article>
                                 </article>
 
                             ))}
                         </section>
-                    </article>
+                    </section>
                 ))}
 
             </section>
 
-            <Footer />
+            {/* <Footer /> */}
         </section>
     )
 }
