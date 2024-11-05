@@ -51,9 +51,9 @@ export default function Categories() {
                                             <img src={product.product_img} alt="" />
                                         </div>
                                         <div className='app-product-info'>
-                                        <p>{product.product_name}</p>
-                                            <p>{product.product_price}kr</p>
-                                            <p><IoAddCircleOutline /></p>
+                                        <h3 className='name'>{product.product_name}</h3>
+                                            <p className='price'>{product.product_price}kr</p>
+                                            <IoAddCircleOutline />
                                         </div>
                                     </article>
                                 </article>

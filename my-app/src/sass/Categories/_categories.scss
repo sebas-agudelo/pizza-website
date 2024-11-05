@@ -16,15 +16,16 @@
             .app-products-wrapper {
 
                 .app-products-content {
-                    padding: 0 3rem;
+                    padding: 0 3.5rem;
 
-
-                    .app-product {
+                        .app-product {
                         width: 100%;
                         text-align: center;
                         border: 1px solid #dfdfdf;
                         border-radius: 1.5rem;
-                        // padding: 2rem 0;
+                        margin-bottom: 1rem;
+                        padding: 1rem 0;
+                        background-color: #fffffd;
 
                         .app-product-img {
                             width: 120px;
@@ -46,10 +47,26 @@
 
                         .app-product-info {
 
-                            p, span{
-                                padding-top: 0.7rem;
-
+                            h3, p, svg{
+                                margin-top: 0.6rem;
                             }
+
+                            .name{
+                                color: #000000;
+                            }
+
+                            .price{
+                                color: #e60000;
+                                font-size: 21px; 
+                            }
+
+                            svg{
+                                font-size: 31px;
+
+                            
+                            }
+
+                          
                         }
                     }
                 }
