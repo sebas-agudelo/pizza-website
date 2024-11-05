@@ -107,7 +107,7 @@ export default function Home({ className }: HomeProps) {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis eius ea eos alias eaque laboriosam at nostrum quis repellendus hic nam vero, quas cupiditate facilis in sunt sit. Eveniet, cumque?
                     <br /> <br />
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam quia ratione facilis deleniti recusandae, corporis commodi magnam voluptates officiis nisi nihil, qui laboriosam assumenda! Quam nesciunt odit rem necessitatibus veritatis.
-            
+
 
                 </p>
 
@@ -137,24 +137,39 @@ export default function Home({ className }: HomeProps) {
                     </article> */}
                 </section>
 
-                <div className='menu-btn'>
+                {/* <div className='menu-btn'>
                     <button>
                         <Link to={`/meny`}>SE MENU</Link>
                     </button>
-                </div>
+                </div> */}
 
             </section>
 
             <section className='app-pickup-wrapper'>
-              
-                <div className='pickup-img-1'>
-                    <img src="pexels-rachel-claire-5865147.jpg" alt="" />
-                </div>
 
-                <div className='btns'>
-                    <button><Link to={``}>Pickup</Link></button>
-                    <button><Link to={``}>Delivery</Link></button>
+                <section className='app-pickup-content'>
+                    <h2>OUR RESTAURANT</h2>
+
+                    <h3>We are locoted in Madrid, Gran Via</h3>
+
+                    <p>
+                        Order easily online
+                    </p>
+
+
+                    <div className='btns'>
+                        <button><Link to={``}>SE MENU</Link></button>
+                        <button><Link to={``}>CALL US</Link></button>
+                    </div>
+
+                </section>
+
+                <div className='pickup-img-1'>
+                    <img src="pexels-antonina-blakytna-486639748-17476654.jpg" alt="" />
                 </div>
+                {/* <div className='pickup-img-1'>
+                    <img src="pexels-unkdevil-19130144.jpg" alt="" />
+                </div> */}
 
             </section>
 
