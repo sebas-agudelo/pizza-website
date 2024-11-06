@@ -96,7 +96,9 @@
                             }
 
                             .product-desc {
-                                font-size: 17px;
+                                font-size: 18px;
+                                max-height: 45px;
+                                overflow-y: hidden;
                             }
 
                             .product-price {
@@ -109,7 +111,7 @@
 
                                 button {
                                     width: 110px;
-                                    padding: 0.9rem;
+                                    padding: 0.8rem;
                                     border-radius: 1.5rem;
                                     border: none;
                                     background-color: #ffd82b;
@@ -118,6 +120,7 @@
                                         text-decoration: none;
                                         color: #fff;
                                         font-weight: bold;
+                                        font-size: 18px;
                                     }
 
                                 }
