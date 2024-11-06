@@ -56,7 +56,7 @@ export default function Categories() {
                                      
                                             <div className='buy-btn'>
                                                 <button>
-                                                    <Link to={``}>Buy</Link>
+                                                    <Link to={``}>Order</Link>
                                                 </button>
                                             </div>
 
