@@ -65,7 +65,7 @@
                         .app-product-img {
                             width: 165px;
                             height: 165px;
-                            margin: auto;
+                            margin: 0 auto 2rem;
 
 
                             img {
@@ -82,11 +82,10 @@
 
                         .app-product-info {
                             padding: 0 2.5rem;
-                            // text-align: center;
 
-                            h3,
-                            p,
-                            .buy-btn {
+                            .product-desc,
+                            .product-price
+                            {
                                 margin-top: 0.8rem;
 
                             }
