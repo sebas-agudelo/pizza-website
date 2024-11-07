@@ -83,17 +83,17 @@ export default function Categories() {
                                     </article>
 
                                     {isModalOpen && currentProduct && currentdProductId === product.id && (
-                                        <section className='modal'>
+                                        <section className={`modal ${isModalOpen ? 'scale-up-ver-bottom' : ''}`}>
                                             <article className='app-modal-content'>
                                                 <div onClick={closeModal} className='modal-close'><RiCloseLargeLine/></div>
 
                                                 <article className='app-modal-product-info'>
-                                                    <h3>{currentProduct.product_name}</h3>
-                                                    <p>{currentProduct.product_desc}</p>
-                                                    <h3>${currentProduct.product_price}</h3>
+                                                    <h3 className='modal-product-name'>{currentProduct.product_name}</h3>
+                                                    <p className='modal-product-desc'>{currentProduct.product_desc}</p>
 
+                                                    <div className='modal-price-qty-wrapper'>
                                                     <form action={``}>
-                                                        <select>
+                                                        <select className='modal-product-qty'>
                                                             <option value="">1</option>
                                                             <option value="">2</option>
                                                             <option value="">3</option>
@@ -105,6 +105,8 @@ export default function Categories() {
                                                             <option value="">9</option>
                                                         </select>
                                                     </form>
+                                                    <h3 className='modal-product-price'>${currentProduct.product_price}</h3>
+                                                    </div>
                                                     <div className='buy-btn'>
                                                         <button>
                                                             <Link to={``}>Order Now</Link>
