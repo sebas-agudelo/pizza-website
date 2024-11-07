@@ -1,5 +1,5 @@
 //MOBILE SCSS
-$lettersSize: 1.2rem;
+$lettersSize: 17px;
 $spaceBetwenSections: 2rem 0;
 $paddingBottom: 2rem;
 
@@ -191,7 +191,7 @@ $paddingBottom: 2rem;
         width: 100%;
         height: auto;
         border-radius: 1rem 1rem 0 0;
-        padding: 0 0 3rem;
+        padding: 1rem 0 2rem;
         
         .speciality-img{
             width: 100%;
@@ -207,8 +207,12 @@ $paddingBottom: 2rem;
 
         h3, h2, p{
             padding: 0.8rem 2.8rem 0;
-            text-align: center;
+          
             
+        }
+
+        h3, h2{
+            text-align: center;
         }
 
         h2{
