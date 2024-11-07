@@ -1,7 +1,6 @@
 .app-category-section {
     width: 100%;
     height: auto;
-    // padding-top: 70px;
 
     .hero {
         position: relative;
@@ -34,9 +33,9 @@
     .app-category-wrapper {
         width: 100%;
         height: auto;
-        padding: 2rem 0;
-
+        
         .app-category-products-wrapper {
+            padding: 2rem 0 0;
 
 
             .category-header {
@@ -55,10 +54,8 @@
 
                     .app-product {
                         width: 100%;
-                        // text-align: center;
                         border: 1px solid #b1b1b1;
                         border-radius: 1.5rem;
-                        margin-bottom: 1rem;
                         padding: 1.5rem 0;
 
                         .app-product-img {
