@@ -97,10 +97,12 @@
                                 
                             }
 
+                    
                             .product-desc {
                                 font-size: 17px;
                                 max-height: 45px;
                                 overflow-y: hidden;
+                                text-align: left;
                             }
 
                             .product-price {
@@ -111,7 +113,7 @@
                             }
 
                             .buy-btn {
-                                text-align: center;
+                                // text-align: center;
                                 margin-top: 1.7rem;
 
                                 button {

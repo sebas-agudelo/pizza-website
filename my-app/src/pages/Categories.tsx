@@ -51,9 +51,11 @@ export default function Categories() {
                                         <div className='app-product-info'>
 
                                             <h3 className='product-name'>{product.product_name}</h3>
-                                            <p className='product-desc'>{product.product_desc}</p>
+                                         
+                                                <p className='product-desc'>{product.product_desc}</p>
+                                          
                                             <h3 className='product-price'>{product.product_price}kr</h3>
-                                     
+
                                             <div className='buy-btn'>
                                                 <button>
                                                     <Link to={``}>Order</Link>
