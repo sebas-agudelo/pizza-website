@@ -52,7 +52,7 @@ export default function Categories() {
 
                                             <h3 className='product-name'>{product.product_name}</h3>
                                             <p className='product-desc'>{product.product_desc}</p>
-                                            <p className='product-price'>{product.product_price}kr</p>
+                                            <h3 className='product-price'>{product.product_price}kr</h3>
                                      
                                             <div className='buy-btn'>
                                                 <button>
