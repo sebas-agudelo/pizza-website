@@ -70,7 +70,7 @@ export default function Home({ className }: HomeProps) {
             </div>
 
             <section className={`app-home-favarite-products-wrapper ${isVisible && !isFullyScrolled ? 'visible' : ''}`}>
-                <p>FAVORITES</p>
+                <h2 className='favorite-product-header'>FAVORITES</h2>
                 <article className='app-home-favarite-products-content'>
                     <article>
                         <div className='home-product-img'>
