@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import { IoAddCircleOutline } from "react-icons/io5";
 import { IProducts } from '../module/products';
+import { RiCloseLargeLine } from "react-icons/ri";
 
 export default function Categories() {
-
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [currentProduct, setCorrentProduct] = useState<IProducts | null>(null);
+    const [currentdProductId, setCurrentProductId] = useState<number | null>(null);
     const [categories, setCategories] = useState<ICategories[]>([]);
     useEffect(() => {
         const fectFunction = async () => {
@@ -19,6 +22,20 @@ export default function Categories() {
         fectFunction()
 
     }, [])
+
+    const openModal = (product: IProducts) => {
+        setIsModalOpen(true)
+        setCorrentProduct(product)
+        setCurrentProductId(product.id)
+        console.log(product.id);
+
+    }
+
+    const closeModal = () => {
+        setIsModalOpen(false)
+        setCorrentProduct(null)
+        setCurrentProductId(null)
+    }
 
     return (
         <section className='app-category-section'>
@@ -36,14 +53,14 @@ export default function Categories() {
 
             <section className='app-category-wrapper'>
 
-                {categories.map((category, index) => (
-                    <section className='app-category-products-wrapper' key={index}>
+                {categories.map((category, catIndex) => (
+                    <section className='app-category-products-wrapper' key={catIndex}>
 
                         <h2 className='category-header'>{category.category_name}</h2>
 
                         <section className='app-products-wrapper'>
-                            {category.products.map((product, index) => (
-                                <article className='app-products-content' key={index}>
+                            {category.products.map((product, prodIndex) => (
+                                <article className='app-products-content' key={prodIndex}>
                                     <article className='app-product'>
                                         <div className='app-product-img'>
                                             <img src={product.product_img} alt="" />
@@ -51,29 +68,60 @@ export default function Categories() {
                                         <div className='app-product-info'>
 
                                             <h3 className='product-name'>{product.product_name}</h3>
-                                         
-                                                <p className='product-desc'>{product.product_desc}</p>
-                                          
+
+                                            <p className='product-desc'>{product.product_desc}</p>
+
                                             <h3 className='product-price'>${product.product_price}</h3>
 
                                             <div className='buy-btn'>
-                                                <button>
+                                                <button onClick={() => openModal(product)}>
                                                     <Link to={``}>Order</Link>
                                                 </button>
                                             </div>
 
                                         </div>
                                     </article>
-                                </article>
 
+                                    {isModalOpen && currentProduct && currentdProductId === product.id && (
+                                        <section className='modal'>
+                                            <article className='app-modal-content'>
+                                                <div onClick={closeModal} className='modal-close'><RiCloseLargeLine/></div>
+
+                                                <article className='app-modal-product-info'>
+                                                    <h3>{currentProduct.product_name}</h3>
+                                                    <p>{currentProduct.product_desc}</p>
+                                                    <h3>${currentProduct.product_price}</h3>
+
+                                                    <form action={``}>
+                                                        <select>
+                                                            <option value="">1</option>
+                                                            <option value="">2</option>
+                                                            <option value="">3</option>
+                                                            <option value="">4</option>
+                                                            <option value="">5</option>
+                                                            <option value="">6</option>
+                                                            <option value="">7</option>
+                                                            <option value="">8</option>
+                                                            <option value="">9</option>
+                                                        </select>
+                                                    </form>
+                                                    <div className='buy-btn'>
+                                                        <button>
+                                                            <Link to={``}>Order Now</Link>
+                                                        </button>
+                                                    </div>
+                                                </article>
+                                            </article>
+                                        </section>
+                                    )}
+                                </article>
                             ))}
                         </section>
                     </section>
                 ))}
-
             </section>
 
             {/* <Footer /> */}
         </section>
-    )
+    );
 }
