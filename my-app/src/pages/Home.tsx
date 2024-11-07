@@ -54,16 +54,17 @@ export default function Home({ className }: HomeProps) {
                     <video src="ppp.mp4" autoPlay loop muted className={`${isVisible && !isFullyScrolled ? 'visible' : ''}`}></video>
 
                 </div>
+                <div className='product-info'>
+                    <div className='h2-gusto-pizza'>
+                        <h1 className={`h2-gusto-pizza-1 ${className}`}>WELCOME TO</h1>
+                        <h1 className={`h2-gusto-pizza-2 ${className}`}>GUSTO PIZZA</h1>
+                    </div>
 
-                <div className='h2-gusto-pizza'>
-                    <h1 className={`h2-gusto-pizza-1 ${className}`}>WELCOME TO</h1>
-                    <h1 className={`h2-gusto-pizza-2 ${className}`}>GUSTO PIZZA</h1>
-                </div>
-
-                <div className='hero-order-btns'>
-                    <button>
-                        <Link to={`/menu`}>SE ALL MENU</Link>
-                    </button>
+                    <div className='hero-order-btns'>
+                        <button>
+                            <Link to={`/menu`}>SE ALL MENU</Link>
+                        </button>
+                    </div>
                 </div>
 
             </div>
@@ -75,19 +76,49 @@ export default function Home({ className }: HomeProps) {
                         <div className='home-product-img'>
                             <img src="Pizza-Margarita-United-Pizza_600x600.png" alt="" />
                         </div>
-                        <p>Margherita Pizza</p>
+
+                        <div className='app-product-info'>                        <h3 className='product-name'>Margherita Pizza</h3>
+                            <p className='product-desc'>Margarita med tomatsås, basilika och ost</p>
+                            <h3 className='product-price'>$11</h3>
+
+                            <div className='buy-btn'>
+                                <button>
+                                    <Link to={``}>Order</Link>
+                                </button>
+                            </div>
+                        </div>
+
                     </article>
                     <article>
                         <div className='home-product-img'>
                             <img src="/kebabpizza.png" alt="" />
                         </div>
-                        <p>Kebab Pizza</p>
+                        <div className='app-product-info'>
+                            <h3 className='product-name'>Kebab Pizza</h3>
+                            <p className='product-desc'>Kebab pizza med rödsås och vitsås, tomat, rök, romansallad och gurka.</p>
+                            <h3 className='product-price'>$11</h3>
+
+                            <div className='buy-btn'>
+                                <button>
+                                    <Link to={``}>Order</Link>
+                                </button>
+                            </div>
+                        </div>
                     </article>
                     <article>
                         <div className='home-product-img'>
                             <img src="pizza-1344720_1920.jpg" alt="" />
                         </div>
-                        <p>Timmo Pizza</p>
+                        <div className='app-product-info'>
+                            <h3 className='product-name'>Timmo Pizza</h3>
+                            <p className='product-desc'>Timmo Pizza</p>
+                            <h3 className='product-price'>$12</h3>
+                            <div className='buy-btn'>
+                                <button>
+                                    <Link to={``}>Order</Link>
+                                </button>
+                            </div>
+                        </div>
                     </article>
                 </article>
 
