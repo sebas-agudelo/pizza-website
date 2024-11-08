@@ -28,10 +28,6 @@ $marginTop: 1.5rem;
                 border-bottom-right-radius: 0rem;
                 transition: border-bottom-right-radius 0.6s linear;
             }
-    
-            // video.visible {
-            //     border-bottom-right-radius: 5rem;
-            // }
         }
 
         .h2-gusto-pizza{
@@ -47,14 +43,14 @@ $marginTop: 1.5rem;
         }
 
         .h2-gusto-pizza-1{
-            font-size: 2.9rem;
+            font-size: 3.5rem;
             
             color: #ffd82b;
         }
 
         .h2-gusto-pizza-2{
             color: #ffffff;
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
 
         .hero-order-btns{
@@ -213,7 +209,7 @@ $marginTop: 1.5rem;
         h3, h2, p{
             padding-left: 2rem;
             padding-right: 2rem;
-            margin-top: $marginTop;
+            margin-top: 1rem;
             
         }
 
@@ -223,7 +219,7 @@ $marginTop: 1.5rem;
 
         h2{
             color: #000000;
-            font-size: 2rem;
+            font-size: 2.2rem;
     
         }
         
@@ -231,7 +227,7 @@ $marginTop: 1.5rem;
             font-family: "Lobster", sans-serif;
             font-weight: 400;
             font-style: normal;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: #ffd82b;
             
         }
@@ -327,7 +323,7 @@ $marginTop: 1.5rem;
             }
             
             h2{
-                font-size: 2.5rem;
+                font-size: 2.2rem;
                 color: #ffd82b;
                 padding-right: 5rem;
                 padding-left: 5rem;
