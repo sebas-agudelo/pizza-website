@@ -1,7 +1,8 @@
 //MOBILE SCSS
 $lettersSize: 17px;
-$paddingTop: 2.5rem;
-$paddingBottom: 2.5rem;
+$paddingTop: 2rem;
+$paddingBottom: 2rem;
+$marginBottom: 1.5rem;
 
 .home {
     
@@ -93,8 +94,8 @@ $paddingBottom: 2.5rem;
         .favorite-product-header {
             font-size: 36px;
             text-align: center;
-                // margin-top: 2.5rem;
-                // margin-bottom: 1.5rem;
+            padding-top: $paddingTop;
+        
         }
 
         .app-home-favarite-products-content {
@@ -192,6 +193,7 @@ $paddingBottom: 2.5rem;
         height: auto;
         border-radius: 1rem 1rem 0 0;
         padding-top: $paddingTop;
+        padding-bottom: $paddingBottom;
   
         
         .speciality-img{
@@ -236,20 +238,21 @@ $paddingBottom: 2.5rem;
         }
     }
 
-    .app-more-pizzas-wrapper{
-        // padding: $spaceBetwenSections;
-        
+    .app-more-pizzas-wrapper{      
         background-image: url('../../../public/bg-img-more.jpg');
         background-position: center;
         background-repeat: no-repeat;
         height: auto;
         text-align: center;
+        padding-top: $paddingTop;
+        padding-bottom: $paddingBottom;
         
         width: 100%;
         height: auto;
 
         h2, h3, .menu-btn{
             text-align: center;
+            
         }
 
         h3{
@@ -258,23 +261,23 @@ $paddingBottom: 2.5rem;
             font-style: normal;
             font-size: 1.6rem;
             color: #ffd82b;
+            margin-bottom: $marginBottom;
         }
 
         p{
             color: #ffffff;
-            padding-top: 0.5rem;
              font-size: 19px;    
         }
 
         .app-more-pizzas-content{
 
             article{
-                padding: 1.5rem 0;
 
                 .more-product-img{
                     width: 165px;
                     height: 165px;
                     margin: auto;
+                    margin-bottom: $marginBottom;   
 
                     img{
                         width: 100%;
@@ -286,7 +289,9 @@ $paddingBottom: 2.5rem;
 
                     }
                 }
+                    
             }
+            
         }
 
         button{
