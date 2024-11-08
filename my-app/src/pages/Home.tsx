@@ -184,7 +184,7 @@ export default function Home({ className }: HomeProps) {
                     <h3>We are locoted in Madrid, Gran Via</h3>
 
                     <div className='btns'>
-                        <button><Link to={`/menu`}>SE MENU</Link></button>
+                        <button className='more-pizza-se-menu-btn'><Link to={`/menu`}>SE MENU</Link></button>
                         <button><Link to={`tel:0700000000`}>CALL US</Link></button>
                     </div>
 
