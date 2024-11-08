@@ -1,7 +1,6 @@
 //MOBILE SCSS
 $lettersSize: 17px;
-$paddingTop: 2rem;
-$paddingBottom: 2rem;
+$linksSize: 16px;
 $marginBottom: 1.5rem;
 $marginTop: 1.5rem;
 
@@ -79,6 +78,7 @@ $marginTop: 1.5rem;
                     color: #ffffff;
                     text-decoration: none;
                     font-weight: bold;
+                    font-size: $linksSize;
                 }
             }
         }
@@ -87,17 +87,16 @@ $marginTop: 1.5rem;
     .app-home-favarite-products-wrapper {
         width: 100%;
         height: auto;
-        opacity: 0;
-        transform: translateY(50px);
-        transition: opacity 0.6s linear, transform 0.6s linear;
+        opacity: 1;
+        // transform: translateY(50px);
+        // transition: opacity 0.6s linear, transform 0.6s linear;
         margin: 0.1rem 0 0 0;
         
     
         .favorite-product-header {
             font-size: 36px;
             text-align: center;
-            // padding-top: $paddingTop;
-            margin-top: $marginTop;
+            margin-top: 2rem;
         
         }
 
@@ -111,7 +110,7 @@ $marginTop: 1.5rem;
                 width: 100%;
                 border: 1px solid #c6c6c6;
                 border-radius: 1.5rem;
-                padding: 1.5rem 0;
+                padding: 2rem 0;
                 margin-top: 1.5rem;
 
                 .home-product-img {
@@ -173,7 +172,7 @@ $marginTop: 1.5rem;
                                 text-decoration: none;
                                 color: #fff;
                                 font-weight: bold;
-                                font-size: 17px;
+                                font-size: $linksSize;
                             }
 
                         }
@@ -186,17 +185,17 @@ $marginTop: 1.5rem;
         }
     }
 
-    .app-home-favarite-products-wrapper.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    // .app-home-favarite-products-wrapper.visible {
+    //     opacity: 1;
+    //     transform: translateY(0);
+    // }
 
     .app-home-speciality-wrapper{
         width: 100%;
         height: auto;
         border-radius: 1rem 1rem 0 0;
-        padding-top: $paddingTop;
-        padding-bottom: $paddingBottom;
+        padding-top: 1.5rem;
+        padding-bottom: 4rem;
   
         
         .speciality-img{
@@ -249,8 +248,8 @@ $marginTop: 1.5rem;
         background-repeat: no-repeat;
         height: auto;
         text-align: center;
-        padding-top: $paddingTop;
-        padding-bottom: $paddingBottom;
+        padding-top: 4rem;
+        padding-bottom: 4em;
         
         width: 100%;
         height: auto;
@@ -271,7 +270,7 @@ $marginTop: 1.5rem;
 
         p{
             color: #ffffff;
-             font-size: 19px;    
+             font-size: 25px;    
         }
 
         .app-more-pizzas-content{
@@ -320,8 +319,8 @@ $marginTop: 1.5rem;
         text-align: center;
 
         .app-pickup-content{
-            padding-top: $paddingTop;
-            padding-bottom: $paddingBottom;
+            padding-top: 1rem;
+            padding-bottom: 4rem;
             h3, p, .btns{
                 margin-top: $marginTop;
 
@@ -350,24 +349,26 @@ $marginTop: 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 0 5rem;
 
             .more-pizza-se-menu-btn{
-                margin-bottom: 0.8rem;
+                margin-bottom: 1.2rem;
             }
         
 
             button{
                 background-color: #ffd82b;
-                padding: 0.9rem;
+                padding: 0.8rem;
                 border-radius: 1.5rem;
                 border: none;
-                width: 110px;
+                width: 100%;
                 
                 a{
 
                     color: #ffffff;
                     text-decoration: none;
                     font-weight: bold;
+                    font-size: $linksSize;
                 }
                 
             }
