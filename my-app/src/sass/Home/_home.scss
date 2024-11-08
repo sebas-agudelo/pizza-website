@@ -1,7 +1,7 @@
 //MOBILE SCSS
 $lettersSize: 17px;
-$spaceBetwenSections: 2rem 0;
-$paddingBottom: 2rem;
+$paddingTop: 2.5rem;
+$paddingBottom: 2.5rem;
 
 .home {
     
@@ -93,22 +93,22 @@ $paddingBottom: 2rem;
         .favorite-product-header {
             font-size: 36px;
             text-align: center;
-            margin-bottom: 1.5rem;
-            margin-top: 1.5rem;
+                // margin-top: 2.5rem;
+                // margin-bottom: 1.5rem;
         }
 
         .app-home-favarite-products-content {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            padding: 0 2.5rem;
+            padding: 0 2rem;
         
             article {
                 width: 100%;
                 border: 1px solid #c6c6c6;
                 border-radius: 1.5rem;
                 padding: 1.5rem 0;
-                margin: 0 0 1rem;
+                margin-top: 1.5rem;
 
                 .home-product-img {
                     width: 165px;
@@ -191,7 +191,8 @@ $paddingBottom: 2rem;
         width: 100%;
         height: auto;
         border-radius: 1rem 1rem 0 0;
-        padding: 1rem 0 2rem;
+        padding-top: $paddingTop;
+  
         
         .speciality-img{
             width: 100%;
@@ -206,8 +207,8 @@ $paddingBottom: 2rem;
         }
 
         h3, h2, p{
-            padding: 0.8rem 2.8rem 0;
-          
+            padding-left: 2rem;
+            padding-right: 2rem;
             
         }
 
@@ -236,7 +237,7 @@ $paddingBottom: 2rem;
     }
 
     .app-more-pizzas-wrapper{
-        padding: $spaceBetwenSections;
+        // padding: $spaceBetwenSections;
         
         background-image: url('../../../public/bg-img-more.jpg');
         background-position: center;
@@ -307,7 +308,7 @@ $paddingBottom: 2rem;
         width: 100%;
         height: auto;
         text-align: center;
-        padding: $spaceBetwenSections;
+        // padding: $spaceBetwenSections;
 
         .app-pickup-content{
        
