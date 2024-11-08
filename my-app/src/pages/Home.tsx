@@ -130,8 +130,8 @@ export default function Home({ className }: HomeProps) {
                 </div>
 
 
-                <h3>Authentic Flavors</h3>
                 <h2>GUSTO PIZZA</h2>
+                <h3>Authentic Flavors</h3>
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis saepe facere, officiis, repellendus eligendi doloribus ipsam quia itaque exercitationem ratione sapiente incidunt fugiat rem et laborum dolorem rerum quod. Harum.
