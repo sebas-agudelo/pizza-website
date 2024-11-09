@@ -215,12 +215,7 @@ $marginTop: 1.5rem;
             text-align: center;
         }
 
-        h3,
-        p,
-        .read-more-btn {
-            margin-top: 1rem;
-        }
-
+       
         h2 {
             color: #000000;
             font-size: 2.7rem;
@@ -233,18 +228,21 @@ $marginTop: 1.5rem;
             font-style: normal;
             font-size: 2rem;
             color: #ffd82b;
+            margin-top: 0.5rem;
 
         }
 
         p {
             font-size: $lettersSize;
             color: #525252;
+            margin-top: 3.2rem;
         }
 
         .read-more-btn {
             text-align: center;
             padding-right: 5rem;
             padding-left: 5rem;
+            margin-top: 3.2rem;
 
             button {
                 padding: 0.9rem;
