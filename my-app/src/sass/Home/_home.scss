@@ -5,12 +5,12 @@ $marginBottom: 1.5rem;
 $marginTop: 1.5rem;
 
 .home {
-    
+
 
     width: 100%;
     height: 100dvh;
 
-    .hero-section{
+    .hero-section {
         position: relative;
         width: 100%;
         height: 100vh;
@@ -19,7 +19,7 @@ $marginTop: 1.5rem;
         .hero-img {
             width: 100%;
             height: 100vh;
-    
+
             video {
                 width: 100%;
                 height: 100%;
@@ -30,11 +30,11 @@ $marginTop: 1.5rem;
             }
         }
 
-        .h2-gusto-pizza{
+        .h2-gusto-pizza {
             position: absolute;
             top: 40%;
             color: #ffffff;
-      
+
 
             width: 100%;
             max-width: 270px;
@@ -42,35 +42,36 @@ $marginTop: 1.5rem;
             transform: translate(-50%, -40%);
         }
 
-        .h2-gusto-pizza-1{
+        .h2-gusto-pizza-1 {
             font-size: 3.5rem;
-            
+
             color: #ffd82b;
         }
 
-        .h2-gusto-pizza-2{
+        .h2-gusto-pizza-2 {
             color: #ffffff;
             font-size: 3rem;
         }
 
-        .hero-order-btns{
+        .hero-order-btns {
             position: absolute;
             top: 60%;
             left: 50%;
             transform: translate(-50%, -60%);
 
-            p{
+            p {
                 padding: 0 4rem;
                 margin-top: 3rem;
             }
-            button{
+
+            button {
                 padding: 1rem 2rem;
                 border-radius: 2rem;
                 background-color: #ffd82b;
                 border: none;
                 margin: 0.8rem 0;
 
-                a{
+                a {
                     color: #ffffff;
                     text-decoration: none;
                     font-weight: bold;
@@ -85,13 +86,13 @@ $marginTop: 1.5rem;
         height: auto;
         opacity: 1;
         margin: 0.1rem 0 0 0;
-        
-    
+
+
         .favorite-product-header {
             font-size: 36px;
             text-align: center;
             margin-top: 2rem;
-        
+
         }
 
         .app-home-favarite-products-content {
@@ -99,7 +100,7 @@ $marginTop: 1.5rem;
             display: flex;
             flex-wrap: wrap;
             padding: 0 2rem;
-        
+
             article {
                 width: 100%;
                 border: 1px solid #c6c6c6;
@@ -111,7 +112,7 @@ $marginTop: 1.5rem;
                     width: 165px;
                     height: 165px;
                     margin: 0 auto 2rem;
-                    
+
                     img {
                         width: 100%;
                         height: 100%;
@@ -119,7 +120,7 @@ $marginTop: 1.5rem;
                         border-radius: 50%;
                         object-position: 0%;
                         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-                        
+
                     }
                 }
 
@@ -127,8 +128,7 @@ $marginTop: 1.5rem;
                     padding: 0 2.5rem;
 
                     .product-desc,
-                    .product-price
-                    {
+                    .product-price {
                         margin-top: 0.8rem;
 
                     }
@@ -136,7 +136,7 @@ $marginTop: 1.5rem;
                     .product-name {
                         color: #313131;
                         font-size: 25px;
-                        
+
                     }
 
                     .product-desc {
@@ -148,7 +148,7 @@ $marginTop: 1.5rem;
                     .product-price {
                         color: #ff0000;
                         font-size: 25px;
-                        
+
                     }
 
                     .buy-btn {
@@ -179,65 +179,90 @@ $marginTop: 1.5rem;
         }
     }
 
-    .app-home-speciality-wrapper{
+    .app-home-speciality-wrapper {
         width: 100%;
         height: auto;
         border-radius: 1rem 1rem 0 0;
         padding-top: 4rem;
         padding-bottom: 4rem;
 
-        
-        .speciality-img{
+
+        .speciality-img {
             width: 100%;
             height: 30vh;
             padding: 0 0.5rem;
-    
-            img{    
+
+            img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 1rem;
                 object-position: 0% 55%;
-            } 
+            }
         }
 
-        h3, h2, p{
+        h3,
+        h2,
+        p {
             padding-left: 2rem;
             padding-right: 2rem;
             // margin-top: 1rem;
-            
+
         }
 
-        h3, h2{
+        h3,
+        h2 {
             text-align: center;
         }
 
-        h3, p{
+        h3,
+        p,
+        .read-more-btn {
             margin-top: 1rem;
         }
 
-        h2{
+        h2 {
             color: #000000;
-            font-size: 2.2rem;
-    
+            font-size: 2.7rem;
+
         }
-        
-        h3{
+
+        h3 {
             font-family: "Lobster", sans-serif;
             font-weight: 400;
             font-style: normal;
-            font-size: 1.6rem;
+            font-size: 2rem;
             color: #ffd82b;
-            
+
         }
 
-        p{
+        p {
             font-size: $lettersSize;
             color: #525252;
         }
+
+        .read-more-btn {
+            text-align: center;
+            padding-right: 3rem;
+            padding-left: 3rem;
+
+            button {
+                padding: 0.9rem;
+                border-radius: 1.5rem;
+                border: none;
+                background-color: #ffd82b;
+                width: 100%;
+
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+        }
     }
 
-    .app-more-pizzas-wrapper{      
+    .app-more-pizzas-wrapper {
         background-image: url('../../../public/bg-img-more.jpg');
         background-position: center;
         background-repeat: no-repeat;
@@ -247,16 +272,18 @@ $marginTop: 1.5rem;
         padding-bottom: 4em;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-        
+
         width: 100%;
         height: auto;
 
-        h2, h3, .menu-btn{
+        h2,
+        h3,
+        .menu-btn {
             text-align: center;
-            
+
         }
 
-        h3{
+        h3 {
             font-family: "Lobster", sans-serif;
             font-weight: 400;
             font-style: normal;
@@ -265,22 +292,22 @@ $marginTop: 1.5rem;
             margin-bottom: $marginBottom;
         }
 
-        p{
+        p {
             color: #ffffff;
-             font-size: 25px;    
+            font-size: 25px;
         }
 
-        .app-more-pizzas-content{
+        .app-more-pizzas-content {
 
-            article{
+            article {
 
-                .more-product-img{
+                .more-product-img {
                     width: 165px;
                     height: 165px;
                     margin: auto;
-                    margin-bottom: $marginBottom;   
+                    margin-bottom: $marginBottom;
 
-                    img{
+                    img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
@@ -290,19 +317,19 @@ $marginTop: 1.5rem;
 
                     }
                 }
-                    
+
             }
-            
+
         }
 
-        button{
+        button {
             padding: 0.9rem;
             border-radius: 1.5rem;
             border: none;
             background-color: #ffd82b;
             width: 110px;
-        
-            a{
+
+            a {
                 color: #ffffff;
                 text-decoration: none;
                 font-weight: bold;
@@ -310,74 +337,77 @@ $marginTop: 1.5rem;
         }
     }
 
-    .app-pickup-wrapper{
+    .app-pickup-wrapper {
         width: 100%;
         height: auto;
         text-align: center;
 
-        .app-pickup-content{
+        .app-pickup-content {
             padding-top: 1rem;
             padding-bottom: 4rem;
-            h3, p, .btns{
+
+            h3,
+            p,
+            .btns {
                 margin-top: $marginTop;
 
             }
-            
-            h2{
+
+            h2 {
                 font-size: 2.2rem;
                 color: #ffd82b;
                 padding-right: 5rem;
                 padding-left: 5rem;
-        }
-
-        h3{
-            font-size: 25px;
-            color: #525252;
-            padding-right: 5rem;
-            padding-left: 5rem;
-         
-        }
-        
-        p{
-            font-size: 1.5rem;
-        }
-
-        .btns{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 5rem;
-
-            .more-pizza-se-menu-btn{
-                margin-bottom: 1.2rem;
             }
-        
 
-            button{
-                background-color: #ffd82b;
-                padding: 0.8rem;
-                border-radius: 1.5rem;
-                border: none;
-                width: 100%;
-                
-                a{
+            h3 {
+                font-size: 25px;
+                color: #525252;
+                padding-right: 5rem;
+                padding-left: 5rem;
 
-                    color: #ffffff;
-                    text-decoration: none;
-                    font-weight: bold;
-                    font-size: $linksSize;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            .btns {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 5rem;
+
+                .more-pizza-se-menu-btn {
+                    margin-bottom: 1.2rem;
                 }
-                
-            }
-            
-        }
-    }
 
-        .pickup-img-1{
+
+                button {
+                    background-color: #ffd82b;
+                    padding: 0.8rem;
+                    border-radius: 1.5rem;
+                    border: none;
+                    width: 100%;
+
+                    a {
+
+                        color: #ffffff;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: $linksSize;
+                    }
+
+                }
+
+            }
+        }
+
+        .pickup-img-1 {
             width: 100%;
             height: 30vh;
 
-            img{
+            img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -424,10 +454,8 @@ $marginTop: 1.5rem;
         .app-home-favarite-products-wrapper {
             width: 100%;
             height: auto;
-            
-            p {
 
-            }
+            p {}
 
             .app-home-favarite-products-content {
                 width: 720px;

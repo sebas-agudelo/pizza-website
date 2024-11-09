@@ -11,6 +11,7 @@ import AdminPanel from './pages/AdminPanel';
 import AddProduct from './pages/AddProduct';
 import Categories from './pages/Categories';
 import { ScrollToTop } from './components/Nav';
+import About from './pages/About';
 
 function App() {
     const [showHome, setShowHome] = useState(false);
@@ -31,6 +32,7 @@ function App() {
                     <Route path='/' element={<Home className={showHome ? 'hidden' : ""}/>}/>
                     <Route path='pizzor' element={<Products className={showHome ? 'hidden' : ""}/>}/>
                     <Route path='/kontakt' element={<Contact />}/>
+                    <Route path='/about' element={<About />}/>
 
                     {/* ALLT OM ADMIN */}
                     <Route path='/adminlogin' element={<Signin />}/>
