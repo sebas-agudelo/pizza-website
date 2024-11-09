@@ -183,19 +183,21 @@ $marginTop: 1.5rem;
         width: 100%;
         height: auto;
         border-radius: 1rem 1rem 0 0;
-        padding-top: 1.5rem;
+        padding-top: 2rem;
         padding-bottom: 4rem;
-  
+
         
         .speciality-img{
             width: 100%;
             height: 30vh;
-
+            padding: 0 0.5rem;
+    
             img{    
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 1rem;
+                object-position: 0% 55%;
             } 
         }
 
@@ -239,6 +241,8 @@ $marginTop: 1.5rem;
         text-align: center;
         padding-top: 4rem;
         padding-bottom: 4em;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
         
         width: 100%;
         height: auto;

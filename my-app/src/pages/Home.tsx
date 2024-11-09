@@ -126,7 +126,7 @@ export default function Home({ className }: HomeProps) {
 
             <section className='app-home-speciality-wrapper'>
                 <div className='speciality-img'>
-                    <img src="window.jpg" alt="" />
+                    <img src="pexels-kubra-tokur-210746713-15441280.jpg" alt="" />
                 </div>
 
 
@@ -136,11 +136,10 @@ export default function Home({ className }: HomeProps) {
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis saepe facere, officiis, repellendus eligendi doloribus ipsam quia itaque exercitationem ratione sapiente incidunt fugiat rem et laborum dolorem rerum quod. Harum.
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis eius ea eos alias eaque laboriosam at nostrum quis repellendus hic nam vero, quas cupiditate facilis in sunt sit. Eveniet, cumque?
-                    <br /> <br />
+                    {/* <br /> <br />
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam quia ratione facilis deleniti recusandae, corporis commodi magnam voluptates officiis nisi nihil, qui laboriosam assumenda! Quam nesciunt odit rem necessitatibus veritatis.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam quia ratione facilis deleniti recusandae, corporis commodi magnam voluptates officiis nisi nihil, qui laboriosam assumenda! Quam nesciunt odit rem necessitatibus veritatis.
-
-
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam quia ratione facilis deleniti recusandae, corporis commodi magnam voluptates officiis nisi nihil, qui laboriosam assumenda! Quam nesciunt odit rem necessitatibus veritatis. */}
+                    
                 </p>
 
             </section>
