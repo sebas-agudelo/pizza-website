@@ -125,13 +125,13 @@ export default function Home({ className }: HomeProps) {
             </section>
 
             <section className='app-home-speciality-wrapper'>
-                <div className='speciality-img'>
-                    <img src="pexels-kubra-tokur-210746713-15441280.jpg" alt="" />
-                </div>
-
-
                 <h2>GUSTO PIZZA</h2>
+                {/* <div className='speciality-img'>
+                    <img src="pexels-kubra-tokur-210746713-15441280.jpg" alt="" />
+                </div> */}
                 <h3>Authentic Flavors</h3>
+
+
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis saepe facere, officiis, repellendus eligendi doloribus ipsam quia itaque exercitationem ratione sapiente incidunt fugiat rem et laborum dolorem rerum quod. Harum.

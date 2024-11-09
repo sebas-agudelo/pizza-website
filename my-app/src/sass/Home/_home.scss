@@ -183,7 +183,7 @@ $marginTop: 1.5rem;
         width: 100%;
         height: auto;
         border-radius: 1rem 1rem 0 0;
-        padding-top: 2rem;
+        padding-top: 4rem;
         padding-bottom: 4rem;
 
         
@@ -204,12 +204,16 @@ $marginTop: 1.5rem;
         h3, h2, p{
             padding-left: 2rem;
             padding-right: 2rem;
-            margin-top: 1rem;
+            // margin-top: 1rem;
             
         }
 
         h3, h2{
             text-align: center;
+        }
+
+        h3, p{
+            margin-top: 1rem;
         }
 
         h2{
