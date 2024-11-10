@@ -191,6 +191,7 @@ $marginTop: 1.5rem;
             width: 100%;
             height: 30vh;
             padding: 0 0.5rem;
+            display: none;
 
             img {
                 width: 100%;
@@ -444,12 +445,11 @@ $marginTop: 1.5rem;
 
         .app-home-favarite-products-wrapper {
             width: 100%;
-            height: auto;
+            height: 100vh;
 
-            p {}
 
             .app-home-favarite-products-content {
-                width: 720px;
+                // width: 720px;
                 margin: auto;
                 padding-left: 1rem;
                 padding-right: 1rem;
@@ -476,35 +476,96 @@ $marginTop: 1.5rem;
                 }
             }
 
-
         }
 
-        .short-bussiness-description {
-            width: 55%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        
+    .app-home-speciality-wrapper {
+        width: 100%;
+        height: 100vh;
+        border-radius: 1rem 1rem 0 0;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
 
-        }
-
-        .app-media-wrapper {
-            width: 45%;
-            // height: auto;
-
-            .app-img-wrapper {
-                width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .app-home-speciality-content{
+         
+                width: 50%;
                 height: 100vh;
-
-                .app-img {
-                    height: 100%;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-
-                    }
+                padding: 8rem 0 0;
+            
+        
+            h3,
+            h2,
+            p {
+                width: 100%;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                // margin-top: 1rem;
+                
+            }
+            
+            h3,
+            h2 {
+                text-align: center;
+            }
+            
+            
+            h2 {
+                color: #000000;
+                font-size: 2.7rem;
+                
+            }
+            
+            h3 {
+                font-family: "Lobster", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 2rem;
+                color: #ffd82b;
+                margin-top: 0.5rem;
+                
+            }
+            
+            p {
+                font-size: $lettersSize;
+                color: #525252;
+                margin-top: 3.2rem;
+            }
+            
+            .read-more-btn {
+                text-align: center;
+                padding-right: 5rem;
+                padding-left: 5rem;
+                margin-top: 3.2rem;
+                
+                a {
+                    color: #ffd82b;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: $linksSize;
                 }
             }
+            
         }
+            .speciality-img {
+                width: 50%;
+                height: 100vh;
+                padding: 0 0.5rem;
+                display: block;
+                
+                img {
+                    width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                        object-position: 0% 55%;
+                    }
+                }
+    }
+
+
     }
 }
