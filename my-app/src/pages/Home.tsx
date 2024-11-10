@@ -136,14 +136,11 @@ export default function Home({ className }: HomeProps) {
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis saepe facere, officiis, repellendus eligendi doloribus ipsam quia itaque exercitationem ratione sapiente incidunt fugiat rem et laborum dolorem rerum quod. Harum.
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis eius ea eos alias eaque laboriosam at nostrum quis repellendus hic nam vero, quas cupiditate facilis in sunt sit. Eveniet, cumque?
-                    
-                    
                 </p>
-                    <div className='read-more-btn'>
-                    <button>
-                        <Link to={`about`}>Read more</Link>
-                    </button>
-                    </div>
+
+                <div className='read-more-btn'>
+                    <Link to={`about`}>Read more</Link>
+                </div>
 
             </section>
 

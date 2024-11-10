@@ -244,15 +244,6 @@ $marginTop: 1.5rem;
             padding-left: 5rem;
             margin-top: 3.2rem;
 
-            button {
-                // padding: 0.7rem;
-                border-radius: 1.5rem;
-                border: none;
-                // background-color: #ffd82b;
-
-                background: none;
-                width: 100%;
-
                 a {
                     color: #ffd82b;
                     text-decoration: none;
@@ -260,7 +251,6 @@ $marginTop: 1.5rem;
                     font-size: $linksSize;
                 }
             }
-        }
     }
 
     .app-more-pizzas-wrapper {
@@ -344,7 +334,7 @@ $marginTop: 1.5rem;
         text-align: center;
 
         .app-pickup-content {
-            padding-top: 1rem;
+            padding-top: 4rem;
             padding-bottom: 4rem;
 
             h3,
