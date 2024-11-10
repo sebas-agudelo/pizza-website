@@ -42,7 +42,7 @@ export default function Categories() {
 
             <section className='hero'>
                 <div className='category-img-wrapper'>
-                    <img src="pexels-roman-odintsov-5903171.jpg" alt="" />
+                    <img src="pexels-muffin-1653877.jpg" alt="" />
                 </div>
 
                 <h2 className='our-menu'>OUR MENU</h2>
