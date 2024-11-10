@@ -104,10 +104,11 @@ $marginTop: 1.5rem;
 
             article {
                 width: 100%;
-                border-bottom: 1px solid #c6c6c6;
-                // border-radius: 1.5rem;
+                border-bottom: 2px solid #f2f2f2;
                 padding: 2rem 0;
                 margin-top: 1.5rem;
+                background-color: #ffd82b04;
+
 
                 .home-product-img {
                     width: 150px;
@@ -149,6 +150,7 @@ $marginTop: 1.5rem;
                     .product-price {
                         color: #ff0000;
                         font-size: 25px;
+                        display: none;
 
                     }
 
@@ -402,7 +404,7 @@ $marginTop: 1.5rem;
 //DESKTOP SCSS
 @media screen and (min-width: 768px) {
     .home {
-        display: block;
+        
         
         .hero-section {
          
@@ -479,20 +481,19 @@ $marginTop: 1.5rem;
 
         .app-home-favarite-products-wrapper {
             width: 100%;
-            height: 100vh;
-            // margin: 5rem 0;
+            height: auto;
+  
 
 
             .app-home-favarite-products-content {
-                // width: 768px;
+                max-width: 992px;
                 margin: auto;
                 padding-left: 0;
                 padding-right: 0;
 
                 article {
-                    width: calc(100% / 3);
-                    margin: 0;
-                    border: none;
+                    width: calc(100% / 3 - 2rem);
+                    margin: 0  1rem;
 
                     .home-product-img {
                       
@@ -651,7 +652,6 @@ $marginTop: 1.5rem;
                 img {
                     width: 100%;
                     height: 100%;
-                    border-radius: 0 1rem 1rem 0;
                     object-fit: cover;
                     object-position: 100% 0%;
                 }
@@ -676,7 +676,7 @@ $marginTop: 1.5rem;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                border-radius: 1rem 0 0 1rem;
+
 
                 width: 50%;
                 height: 100%;
@@ -822,25 +822,26 @@ $marginTop: 1.5rem;
     .home{
         .app-home-favarite-products-wrapper {
             width: 100%;
-            height: 100vh;
-
-
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
             .app-home-favarite-products-content {
-                // width: 768px;
+                max-width: 1200px;
                 margin: auto;
                 padding-left: 0;
                 padding-right: 0;
              
                 article {
-                    width: calc(100% / 3 - 2rem);
-                    margin: 0 1rem;
-                    // border: none;
+        
 
                     .home-product-img {
                       
                         width: 290px;
                         height: 290px;
-                        margin: 0 auto;
+                        margin: 0 auto 4rem;
 
 
                         img {
@@ -855,11 +856,12 @@ $marginTop: 1.5rem;
                     }
                     
                     .app-product-info {
-                        padding: 0 4.5rem;
+                        // padding: 0 4.5rem;
+                        text-align: center;
                         
                         .product-desc,
                         .product-price {
-                            margin-top: 0.8rem;
+                            margin-top: 2rem;
                             
                         }
                         
