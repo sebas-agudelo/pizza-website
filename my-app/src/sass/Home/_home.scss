@@ -86,6 +86,7 @@ $marginTop: 1.5rem;
         height: auto;
         opacity: 1;
         margin: 0.1rem 0 0 0;
+   
 
 
         .favorite-product-header {
@@ -103,14 +104,14 @@ $marginTop: 1.5rem;
 
             article {
                 width: 100%;
-                border: 1px solid #c6c6c6;
-                border-radius: 1.5rem;
+                border-bottom: 1px solid #c6c6c6;
+                // border-radius: 1.5rem;
                 padding: 2rem 0;
                 margin-top: 1.5rem;
 
                 .home-product-img {
-                    width: 165px;
-                    height: 165px;
+                    width: 150px;
+                    height: 150px;
                     margin: 0 auto 2rem;
 
                     img {
@@ -188,18 +189,7 @@ $marginTop: 1.5rem;
 
 
         .speciality-img {
-            width: 100%;
-            height: 30vh;
-            padding: 0 0.5rem;
             display: none;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 1rem;
-                object-position: 0% 55%;
-            }
         }
 
         h3,
@@ -207,7 +197,7 @@ $marginTop: 1.5rem;
         p {
             padding-left: 2rem;
             padding-right: 2rem;
-            // margin-top: 1rem;
+            margin-bottom: 2rem;
 
         }
 
@@ -229,29 +219,25 @@ $marginTop: 1.5rem;
             font-style: normal;
             font-size: 2rem;
             color: #ffd82b;
-            margin-top: 0.5rem;
-
         }
 
         p {
             font-size: $lettersSize;
             color: #525252;
-            margin-top: 3.2rem;
         }
 
         .read-more-btn {
             text-align: center;
             padding-right: 5rem;
             padding-left: 5rem;
-            margin-top: 3.2rem;
 
-                a {
-                    color: #ffd82b;
-                    text-decoration: none;
-                    font-weight: bold;
-                    font-size: $linksSize;
-                }
+            a {
+                color: #ffd82b;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: $linksSize;
             }
+        }
     }
 
     .app-more-pizzas-wrapper {
@@ -380,7 +366,8 @@ $marginTop: 1.5rem;
                     padding: 0.8rem;
                     border-radius: 1.5rem;
                     border: none;
-                    width: 100%;
+                    width: 200px;
+
 
                     a {
 
@@ -415,49 +402,100 @@ $marginTop: 1.5rem;
 //DESKTOP SCSS
 @media screen and (min-width: 768px) {
     .home {
-        width: 100%;
-        height: calc(100vh - 90px);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .hero-img {
+        display: block;
+        
+        .hero-section {
+         
+            position: relative;
             width: 100%;
             height: 100vh;
+            text-align: center;
 
-            img {
+            .hero-img {
                 width: 100%;
-                height: 100%;
+                height: 100vh;
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 0% 30%;
+                    border-bottom-right-radius: 0rem;
+                    transition: border-bottom-right-radius 0.6s linear;
+                }
+            }
+
+            .h2-gusto-pizza {
+                position: absolute;
+                top: 40%;
+                color: #ffffff;
+
+
+                width: 100%;
+                max-width: 270px;
+                left: 50%;
+                transform: translate(-50%, -40%);
+            }
+
+            .h2-gusto-pizza-1 {
+                font-size: 3.5rem;
+
+                color: #ffd82b;
+            }
+
+            .h2-gusto-pizza-2 {
+                color: #ffffff;
+                font-size: 3rem;
+            }
+
+            .hero-order-btns {
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -60%);
+
+                p {
+                    padding: 0 4rem;
+                    margin-top: 3rem;
+                }
+
+                button {
+                    padding: 1rem 2rem;
+                    border-radius: 2rem;
+                    background-color: #ffd82b;
+                    border: none;
+                    margin: 0.8rem 0;
+
+                    a {
+                        color: #ffffff;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: $linksSize;
+                    }
+                }
             }
         }
 
-        .h2-gusto-pizza {
-            position: absolute;
-            top: 30%;
-            color: #f6ff00;
-            font-size: 3.3rem;
-            width: 100%;
-            max-width: 270px;
-            left: 50%;
-            transform: translate(-50%, -30%);
-            text-align: center;
-        }
 
         .app-home-favarite-products-wrapper {
             width: 100%;
             height: 100vh;
+            // margin: 5rem 0;
 
 
             .app-home-favarite-products-content {
-                // width: 720px;
+                // width: 768px;
                 margin: auto;
-                padding-left: 1rem;
-                padding-right: 1rem;
+                padding-left: 0;
+                padding-right: 0;
 
                 article {
                     width: calc(100% / 3);
+                    margin: 0;
+                    border: none;
 
                     .home-product-img {
+                      
                         width: 200px;
                         height: 200px;
                         margin: 0 auto;
@@ -475,97 +513,400 @@ $marginTop: 1.5rem;
                     }
                 }
             }
-
         }
 
-        
-    .app-home-speciality-wrapper {
-        width: 100%;
-        height: 100vh;
-        border-radius: 1rem 1rem 0 0;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        .app-home-speciality-wrapper {
+            width: 100%;
+            height: 100vh;
+            border-radius: 0;
+            padding-top: 0;
+            padding-bottom: 0;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        .app-home-speciality-content{
-         
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+
+            .app-home-speciality-content {
                 width: 50%;
                 height: 100vh;
-                padding: 8rem 0 0;
-            
-        
-            h3,
-            h2,
-            p {
-                width: 100%;
-                padding-left: 2rem;
-                padding-right: 2rem;
-                // margin-top: 1rem;
-                
-            }
-            
-            h3,
-            h2 {
-                text-align: center;
-            }
-            
-            
-            h2 {
-                color: #000000;
-                font-size: 2.7rem;
-                
-            }
-            
-            h3 {
-                font-family: "Lobster", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                font-size: 2rem;
-                color: #ffd82b;
-                margin-top: 0.5rem;
-                
-            }
-            
-            p {
-                font-size: $lettersSize;
-                color: #525252;
-                margin-top: 3.2rem;
-            }
-            
-            .read-more-btn {
-                text-align: center;
-                padding-right: 5rem;
-                padding-left: 5rem;
-                margin-top: 3.2rem;
-                
-                a {
-                    color: #ffd82b;
-                    text-decoration: none;
-                    font-weight: bold;
-                    font-size: $linksSize;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .hero-section {
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+                    text-align: center;
+
+                    .hero-img {
+                        width: 100%;
+                        height: 100vh;
+
+                        video {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: 0%;
+                            border-bottom-right-radius: 0rem;
+                            transition: border-bottom-right-radius 0.6s linear;
+                        }
+                    }
+
+                    .h2-gusto-pizza {
+                        position: absolute;
+                        top: 40%;
+                        color: #ffffff;
+
+
+                        width: 100%;
+                        max-width: 270px;
+                        left: 50%;
+                        transform: translate(-50%, -40%);
+                    }
+
+                    .h2-gusto-pizza-1 {
+                        font-size: 3.5rem;
+
+                        color: #ffd82b;
+                    }
+
+                    .h2-gusto-pizza-2 {
+                        color: #ffffff;
+                        font-size: 3rem;
+                    }
+
+                    .hero-order-btns {
+                        position: absolute;
+                        top: 60%;
+                        left: 50%;
+                        transform: translate(-50%, -60%);
+
+                        p {
+                            padding: 0 4rem;
+                            margin-top: 3rem;
+                        }
+
+                        button {
+                            padding: 1rem 2rem;
+                            border-radius: 2rem;
+                            background-color: #ffd82b;
+                            border: none;
+                            margin: 0.8rem 0;
+
+                            a {
+                                color: #ffffff;
+                                text-decoration: none;
+                                font-weight: bold;
+                                font-size: $linksSize;
+                            }
+                        }
+                    }
                 }
+
+
+                h3,
+                h2,
+                p {
+                    padding-left: 6rem;
+                    padding-right: 6rem;
+
+                }
+
+                h2 {
+
+                    font-size: 2.7rem;
+
+                }
+
+                h3 {
+                    font-size: 2rem;
+
+                }
+
+                p {
+                    font-size: $lettersSize;
+
+
+                }
+
+                .read-more-btn {
+
+                    a {
+                        font-size: 19px;
+                    }
+                }
+
             }
-            
-        }
+
             .speciality-img {
                 width: 50%;
                 height: 100vh;
-                padding: 0 0.5rem;
+                padding: 0 0;
                 display: block;
-                
+
                 img {
                     width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: 1rem;
-                        object-position: 0% 55%;
+                    height: 100%;
+                    border-radius: 0 1rem 1rem 0;
+                    object-fit: cover;
+                    object-position: 100% 0%;
+                }
+            }
+        }
+
+        .blabla {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+            .app-more-pizzas-wrapper {
+                background-image: url('../../../public/bg-img-more.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                text-align: center;
+                padding-top: 4rem;
+                padding-bottom: 4em;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1rem 0 0 1rem;
+
+                width: 50%;
+                height: 100%;
+
+                position: absolute;
+                right: 0;
+
+                h2,
+                h3,
+                .menu-btn {
+                    text-align: center;
+
+                }
+
+                h3 {
+                    font-family: "Lobster", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 2rem;
+                    color: #ffd82b;
+                    margin-bottom: $marginBottom;
+                }
+
+                p {
+                    color: #ffffff;
+                    font-size: 25px;
+                }
+
+                .app-more-pizzas-content {
+
+                    article {
+
+                        .more-product-img {
+                            width: 350px;
+                            height: 350px;
+                            margin: auto;
+                            margin-bottom: $marginBottom;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                object-position: 0%;
+                                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+                            }
+                        }
+
+                    }
+
+                }
+            }
+
+            .app-pickup-wrapper {
+                width: 50%;
+                height: 100vh;
+                text-align: center;
+
+                .app-pickup-content {
+                    height: 100%;
+                    padding-top: 0rem;
+                    padding-bottom: 0rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    h3,
+                    p,
+                    .btns {
+                        margin-top: $marginTop;
+
+                    }
+
+                    h2 {
+                        font-size: 2.7rem;
+                        color: #ffd82b;
+                        padding-right: 5rem;
+                        padding-left: 5rem;
+                    }
+
+                    h3 {
+                        font-size: 25px;
+                        color: #525252;
+                        padding-right: 5rem;
+                        padding-left: 5rem;
+
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+
+                    .btns {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 0 5rem;
+
+                        .more-pizza-se-menu-btn {
+                            margin-bottom: 1.2rem;
+                        }
+
+
+                        button {
+                            background-color: #ffd82b;
+                            padding: 0.8rem;
+                            border-radius: 1.5rem;
+                            border: none;
+
+                            a {
+
+                                color: #ffffff;
+                                text-decoration: none;
+                                font-weight: bold;
+                                font-size: $linksSize;
+                            }
+
+                        }
+
                     }
                 }
+
+                .pickup-img-1 {
+                    width: 100%;
+                    height: 30vh;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: 0% 100%;
+                    }
+                }
+            }
+
+        }
+
     }
+}
+
+@media screen and (min-width: 992px) {
+    .home{
+        .app-home-favarite-products-wrapper {
+            width: 100%;
+            height: 100vh;
 
 
+            .app-home-favarite-products-content {
+                // width: 768px;
+                margin: auto;
+                padding-left: 0;
+                padding-right: 0;
+             
+                article {
+                    width: calc(100% / 3 - 2rem);
+                    margin: 0 1rem;
+                    // border: none;
+
+                    .home-product-img {
+                      
+                        width: 290px;
+                        height: 290px;
+                        margin: 0 auto;
+
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    
+                    .app-product-info {
+                        padding: 0 4.5rem;
+                        
+                        .product-desc,
+                        .product-price {
+                            margin-top: 0.8rem;
+                            
+                        }
+                        
+                        .product-name {
+                            color: #333333;
+                            font-size: 25px;
+                            
+                        }
+                        
+                        .product-desc {
+                            font-size: 17px;
+                            max-height: 42px;
+                            overflow-y: hidden;
+                        }
+
+                        .product-price {
+                            color: #ff0000;
+                            font-size: 25px;
+                            
+                        }
+                        
+                        .buy-btn {
+                            text-align: center;
+                            margin-top: 1.7rem;
+                            
+                            button {
+                                width: 100%;
+                                padding: 0.8rem;
+                                border-radius: 1.5rem;
+                                border: none;
+                                background-color: #ffd82b;
+                                
+                                a {
+                                    text-decoration: none;
+                                    color: #fff;
+                                    font-weight: bold;
+                                    font-size: $linksSize;
+                                }
+                                
+                            }
+                        }
+                        
+                        
+                    }
+                }
+            }
+
+        }
     }
 }

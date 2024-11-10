@@ -120,6 +120,7 @@ export default function Home({ className }: HomeProps) {
                             </div> */}
                         </div>
                     </article>
+                 
                 </article>
 
             </section>
@@ -127,9 +128,9 @@ export default function Home({ className }: HomeProps) {
             <section className='app-home-speciality-wrapper'>
 
 
-                    <div className='speciality-img'>
-                        <img src="pexels-kubra-tokur-210746713-15441280.jpg" alt="" />
-                    </div>
+                <div className='speciality-img'>
+                    <img src="pexels-bluerhinomedia-2788792.jpg" alt="" />
+                </div>
 
                 <div className='app-home-speciality-content'>
 
@@ -149,62 +150,64 @@ export default function Home({ className }: HomeProps) {
 
             </section>
 
-            <section className='app-more-pizzas-wrapper'>
-                {/* <h2>MORE PIZZAS</h2> */}
-                <h3>MORE DELICIOUS</h3>
-                <section className='app-more-pizzas-content'>
-                    <article>
+            <section className='blabla'>
+                <section className='app-more-pizzas-wrapper'>
+                    {/* <h2>MORE PIZZAS</h2> */}
+                    <h3>MORE DELICIOUS</h3>
+                    <section className='app-more-pizzas-content'>
+                        <article>
+                            <div className='more-product-img'>
+                                <img src="Pizza-Margarita-United-Pizza_600x600.png" alt="" />
+                            </div>
+                            <p>Margherita Pizza</p>
+                        </article>
+                        {/* <article>
                         <div className='more-product-img'>
-                            <img src="Pizza-Margarita-United-Pizza_600x600.png" alt="" />
-                        </div>
-                        <p>Margherita Pizza</p>
-                    </article>
-                    {/* <article>
-                        <div className='more-product-img'>
-                            <img src="/kebabpizza.png" alt="" />
+                        <img src="/kebabpizza.png" alt="" />
                         </div>
                         <p>Kebab Pizza</p>
-                    </article>
-                    <article>
+                        </article>
+                        <article>
                         <div className='more-product-img'>
-                            <img src="pizza-1344720_1920.jpg" alt="" />
+                        <img src="pizza-1344720_1920.jpg" alt="" />
                         </div>
                         <p>Timmo Pizza</p>
-                    </article> */}
-                </section>
+                        </article> */}
+                    </section>
 
-                {/* <div className='menu-btn'>
+                    {/* <div className='menu-btn'>
                     <button>
-                        <Link to={`/meny`}>SE MENU</Link>
+                    <Link to={`/meny`}>SE MENU</Link>
                     </button>
-                </div> */}
-
-            </section>
-
-            <section className='app-pickup-wrapper'>
-
-                <section className='app-pickup-content'>
-                    <h2>ORDER EASILY ONLINE</h2>
-
-                    <h3>We are locoted in Madrid, Gran Via</h3>
-
-                    <div className='btns'>
-                        <button className='more-pizza-se-menu-btn'><Link to={`/menu`}>SE MENU</Link></button>
-                        <button><Link to={`tel:0700000000`}>CALL US</Link></button>
-                    </div>
+                    </div> */}
 
                 </section>
 
-                {/* <div className='pickup-img-1'>
+                <section className='app-pickup-wrapper'>
+
+                    <section className='app-pickup-content'>
+                        <h2>ORDER EASILY ONLINE</h2>
+
+                        <h3>We are locoted in Madrid, Gran Via</h3>
+
+                        <div className='btns'>
+                            <button className='more-pizza-se-menu-btn'><Link to={`/menu`}>SE MENU</Link></button>
+                            <button><Link to={`tel:0700000000`}>CALL US</Link></button>
+                        </div>
+
+                    </section>
+
+                    {/* <div className='pickup-img-1'>
                     <img src="pexels-antonina-blakytna-486639748-17476654.jpg" alt="" />
-                </div> */}
-                {/* <div className='pickup-img-1'>
+                    </div> */}
+                    {/* <div className='pickup-img-1'>
                     <img src="pexels-unkdevil-19130144.jpg" alt="" />
-                </div> */}
+                    </div> */}
+
+                </section>
+
 
             </section>
-
-
 
             {/* <Footer /> */}
         </div>
