@@ -141,7 +141,7 @@ export default function Home({ className }: HomeProps) {
                 </p>
                     <div className='read-more-btn'>
                     <button>
-                        <Link to={`about`}>READ MORE</Link>
+                        <Link to={`about`}>Read more</Link>
                     </button>
                     </div>
 
