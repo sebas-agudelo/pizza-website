@@ -53,12 +53,13 @@
 
                 .app-products-content {
                     position: relative;
+                    padding: 0 1rem;
 
                     .app-product {
                         width: 100%;
                         border-bottom: 2px solid #b1b1b1;
                         padding: 1.5rem 0;
-                background-color: #ffd82b07;
+                        background-color: #ffd82b09;
 
 
                         .app-product-img {
@@ -82,37 +83,36 @@
                         .app-product-info {
                             padding: 0 2.5rem;
 
-                            .product-desc,
-                            .product-price
-                            {
-                                margin-top: 0.8rem;
+                            .name-and-price{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 2rem;
 
+                                .product-name {
+                                    color: #313131;
+                                    font-size: 25px;
+                                    
+                                }
+
+                                .product-price {
+                                    color: #ff0000;
+                                    font-size: 25px;                    
+                                }
                             }
 
-                            .product-name {
-                                color: #313131;
-                                font-size: 25px;
-                                
-                            }
 
                     
                             .product-desc {
                                 font-size: 17px;
                                 max-height: 42px;
                                 overflow-y: hidden;
+                                margin-bottom: 2rem;
                             }
 
-                            .product-price {
-                                color: #ff0000;
-                                font-size: 25px;
-                            
-                                
-                            }
 
                             .buy-btn {
                                 text-align: center;
-                                margin-top: 1.7rem;
-
+                               
                                 button {
                                     width: 100%;
                                     padding: 0.8rem;
@@ -145,14 +145,14 @@
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 0 2rem 1rem;
+        padding: 0 1rem;
         
         
         .app-modal-content{
             width: 100%;
             height: 100%;
             background-color: #e7e6c7;
-            border-radius: 1.5rem;
+            border-radius: 1.5rem 1.5rem 0 0;
             overflow: hidden;
 
             .modal-close{
